@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kalender</title>
+<meta charset="utf-8" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<style>
+.ui-datepicker,
+.ui-datepicker table,
+.ui-datepicker tr,
+.ui-datepicker td,
+.ui-datepicker th {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-spacing: 0;
+}
+
+.ui-datepicker {
+    display: none;
+    width: 210px;
+    padding: 0;
+    cursor: default;
+ 
+    text-transform: uppercase;
+    font-family: Tahoma;
+    font-size: 12px;
+ 
+    background: #FFFFFF;
+}
+
+.ui-datepicker-header {
+    position: relative;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #d6d6d6;
+}
+ 
+.ui-datepicker-title {
+	text-align: center;
+	padding-bottom: 0px;
+}
+ 
+.ui-datepicker-month {
+    position: relative;
+    padding-right: 15px;
+    color: #000000;
+}
+ 
+.ui-datepicker-year {
+    padding-left: 8px;
+    color: #000000;
+}
+
+.ui-datepicker-month:before {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 5px;
+    height: 5px;
+    content: '';
+ 
+    background: #a5cd4e;
+    border-radius: 2px;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+    position: absolute;
+    cursor: pointer;
+}
+ 
+.ui-datepicker-prev {
+    left: 0;
+    padding-left: 0;
+}
+ 
+.ui-datepicker-next {
+    right: 0;
+    padding-right: 0;
+}
+ 
+.ui-datepicker-prev span {
+	display: none;
+}
+
+.ui-datepicker-prev:after {
+	content: "\276E";
+}
+
+.ui-datepicker-next span {
+	display: none;
+}
+
+.ui-datepicker-next:after {
+	content: "\276F";
+}
+ 
+.ui-datepicker-prev span { background-position: 0px 0px; }
+ 
+.ui-datepicker-next span { background-position: -5px 0px; }
+ 
+.ui-datepicker-prev-hover span { background-position: 0px -10px; }
+ 
+.ui-datepicker-next-hover span { background-position: -5px -10px; }
+
+.ui-datepicker-calendar th {
+    padding-top: 5px;
+    padding-bottom: 10px;
+ 
+    text-align: center;
+    font-weight: normal;
+    color: #000000;
+}
+
+.ui-datepicker-calendar td {
+    padding: 0 1px;
+ 
+    text-align: center;
+    line-height: 26px;
+}
+ 
+.ui-datepicker-calendar .ui-state-default {
+    display: block;
+    width: 26px;
+    outline: none;
+ 
+    text-decoration: none;
+    color: #000000;
+ 
+    border: 1px solid transparent;
+}
+
+.ui-datepicker-calendar .ui-state-active {
+    color: #a5cd4e;
+    border: 1px solid #a5cd4e;
+    border-radius: 5px;
+}
+ 
+.ui-datepicker-other-month .ui-state-default { color: #CCCCCC; }
+
+</style>
+</head>
+<body>
+<!-- <div id="calendar"></div> -->
+<input type="text" id="calendar">
+<script>
+	$('#calendar').datepicker({
+        inline: true,
+        firstDay: 1,
+        showOtherMonths: true,
+        dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+    });
+</script>
+</body>
+</html>

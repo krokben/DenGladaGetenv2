@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="description">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+<header class="ccheader"><img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDM2Ny43MDcgMzY3LjcwNyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzY3LjcwNyAzNjcuNzA3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGc+Cgk8cGF0aCBzdHlsZT0iZmlsbDojNzU1RTNFOyIgZD0iTTM0Ny42ODUsMTk3LjU3N2MwLDEuNDMtMC4wMiwyLjg2LTAuMDUsNC4yOGMtMC40MiwxNi44Mi0zLjI3LDMzLjAzLTguMjMsNDguMjl2MC4wMSAgIGMtMjIuMTUsNjguMjMtODYuMjQsMTE3LjU1LTE2MS44NCwxMTcuNTVjLTIuNzQsMC01LjQ2LTAuMDYtOC4xNi0wLjE5Yy00My41OS0yLjA2LTgyLjktMjAuNTMtMTExLjg3LTQ5LjM4ICAgYy0xLjEyLTEuMTEtMi4yMi0yLjI0LTMuMzItMy4zOWMtMTIuMzgtMTMuMDMtMjIuNzItMjguMDItMzAuNS00NC40NmMtMTAuNDQtMjIuMDQtMTYuMjgtNDYuNjktMTYuMjgtNzIuNzEgICBjMC01Ni41NSwyNy41OS0xMDYuNjUsNzAuMDQtMTM3LjU4YzE4Ljc2LTEzLjY3LDQwLjQzLTIzLjYsNjMuOS0yOC42OGMxMS42Ni0yLjUzLDIzLjc3LTMuODYsMzYuMTktMy44NiAgIGMxNC41NiwwLDI4LjY5LDEuODMsNDIuMTcsNS4yN2MxOC4wMyw0LjU5LDM0LjksMTIuMDcsNTAuMTEsMjEuOTFjNi4wNCwzLjkxLDExLjgzLDguMTksMTcuMzEsMTIuODMgICBjMjMuNTcsMTkuODYsNDEuNjcsNDYuMDIsNTEuNyw3NS44OWMxLjM5LDQuMTIsMi42Miw4LjMxLDMuNjksMTIuNTdjMC41NSwyLjE4LDEuMDYsNC4zNywxLjUxLDYuNThjMC41LDIuMzMsMC45NCw0LjY4LDEuMzMsNy4wNSAgIGMwLjIxLDEuMjksMC40MSwyLjU4LDAuNTksMy44OWMwLjI0LDEuNjQsMC40NiwzLjI5LDAuNjQsNC45NmMwLjI0LDIuMDgsMC40Myw0LjE4LDAuNTksNi4yOGMwLjI3LDMuNTMsMC40Miw3LjEsMC40NiwxMC42OSAgIEMzNDcuNjg1LDE5Ni4xMDcsMzQ3LjY4NSwxOTYuODM3LDM0Ny42ODUsMTk3LjU3N3oiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNFOEI5ODk7IiBkPSJNMTY3LjczNSwxNDUuOTA3Yy0yLjQ4LDAuNDUtNC45NSwwLjc4LTcuNCwwLjk4Yy01Ljg0LDAuNDctMTEuNiwwLjI0LTE3LjItMC42MyAgIGMyNi40MS0xNS4wNiw0MS43My00NS42MywzNS45Mi03Ny4yMmMtNS40Ny0yOS43My0yOC4xLTUxLjk2LTU1Ljc5LTU4LjM2Yy0xLjczLTAuNDEtMy40OC0wLjc1LTUuMjUtMS4wMiAgIGM2Ljk5LTMuOTgsMTQuNzUtNi45LDIzLjExLTguNDNjMzkuOTUtNy4zNSw3OC4zLDE5LjA4LDg1LjY1LDU5LjAzQzIzNC4xMjUsMTAwLjIxNywyMDcuNjg1LDEzOC41NjcsMTY3LjczNSwxNDUuOTA3eiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0QxQTA3NDsiIGQ9Ik0xNjAuMzM1LDE0Ni44ODdjLTUuODQsMC40Ny0xMS42LDAuMjQtMTcuMi0wLjYzYzI2LjQxLTE1LjA2LDQxLjczLTQ1LjYzLDM1LjkyLTc3LjIyICAgYy01LjQ3LTI5LjczLTI4LjEtNTEuOTYtNTUuNzktNTguMzZjMzQuMjMsMC42Niw2NC40MSwyNS4yOCw3MC44NCw2MC4yNUMxOTkuNzU1LDEwMS42NTcsMTg1LjQzNSwxMzEuNDM3LDE2MC4zMzUsMTQ2Ljg4N3oiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGMkYyRjI7IiBkPSJNMzA4LjgxNSwyMTguMDQ3YzAsMCwyLjU1LDIxLjMtOS40NSwzNy4zcy05LDMyLTMsMzkuNWMwLDAtMjQtMTQtMTctMzguNXM1LTM0LjUtMi00MiAgIFMzMDguODE1LDIxOC4wNDcsMzA4LjgxNSwyMTguMDQ3eiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0U2RTZFNjsiIGQ9Ik0zNjAuMDg1LDE2MC43NjdsLTAuMjcsMS40M2wtMi4xMSwxMS4yNWwtMC40MywyLjMxbC0wLjE3LDAuOTJsLTEuNSw4LjAxaC0yMy43NyAgIGMwLDAuMDksMCwwLjE5LDAuMDEsMC4yOGMwLjE0LDUuNzgsNC44NywxMC40MSwxMC42OCwxMC40MWg5LjM4Yy0xLjIxLDIuMzEtMi42NCw0LjQ4LTQuMjcsNi40OCAgIGMtNS42OSw2Ljk3LTEzLjc4LDExLjg4LTIzLjA0LDEzLjQ3bC0xNS43OCwyLjcybC0zNC4zNiw1LjkxbC01OC4zNjIsMTAuMDUyYy02LjU4MSwxLjEzNC0xMS45MTEsNS45NzYtMTMuNjY4LDEyLjQxOSAgIGwtMzMuMDIsMTIxLjA4OWMtNDMuNTktMi4wNi04Mi45LTIwLjUzLTExMS44Ny00OS4zOGMtMS4xMi0xLjExLTIuMjItMi4yNC0zLjMyLTMuMzljLTEyLjM4LTEzLjAzLTIyLjcyLTI4LjAyLTMwLjUtNDQuNDYgICBsMTIxLjc4LTE3MC42MWM5LjE0LTE2LjU5LDI2LjU5LTI2Ljg5LDQ1LjUzLTI2Ljg5aDEyLjY0YzIuNzgsMCw1LjU1LDAuMTQsOC4zLDAuNDJjOC4yMiwwLjgyLDE2LjIzLDIuODUsMjMuNzgsNi4wMSAgIGM4LjQ3LDMuNTQsMTYuMzcsOC40OCwyMy4zMywxNC43bDAuMjUsMC4yYzEuODEsMS42MiwzLjY0LDMuMjEsNS41LDQuNzdjMjIuMTQsMTguNzEsNDcuMTQsMzMuNzIsNzQuMDMsNDQuNDcgICBjNC42NSwxLjg2LDkuMzUsMy42LDE0LjExLDUuMkMzNTguMDQ1LDE1MC4yNjcsMzYxLjA3NSwxNTUuNDg3LDM2MC4wODUsMTYwLjc2N3oiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiM0RDRENEQ7IiBkPSJNMzU5LjgxOSwxNjIuMTk3bC0yLjExNCwxMS4yNDdoLTExLjgwOWMtMS41NTIsMC0yLjk1OC0wLjYzLTMuOTgyLTEuNjQyICAgYy0xLjAxMi0xLjAyMy0xLjY0Mi0yLjQyOS0xLjY0Mi0zLjk4MWMwLTMuMTA0LDIuNTE5LTUuNjI0LDUuNjI0LTUuNjI0SDM1OS44MTl6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojQ0NDQ0NDOyIgZD0iTTE5MS4zNyw3MS42NzhjMCwwLDYwLjcxLDguMTA0LDEwNi42MTYtNDEuNjI2YzAsMC00LjU2OCwzNC42OTgtMjUuOTEzLDYwLjUxMSAgIGMtMTcuMTg5LDIwLjc4OC00OS4yOTgsMjAuMTk3LTY2LjE5NC0wLjgyOUwxOTEuMzcsNzEuNjc4eiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6IzRENEQ0RDsiIGQ9Ik0yNTguMjkxLDEyMy4zOTVoLTEzLjA1N3YxLjI0N2MwLDUuNTIzLDQuNDc3LDEwLDEwLDEwaDEzLjA1NnYtMS4yNDcgICBDMjY4LjI5MSwxMjcuODcyLDI2My44MTQsMTIzLjM5NSwyNTguMjkxLDEyMy4zOTV6Ii8+Cgk8cG9seWdvbiBzdHlsZT0iZmlsbDojRjQ1RDVEOyIgcG9pbnRzPSIxOTQuODY1LDMxOS44NDcgNTQuMTk4LDIxMy4xOCA3MC4xMTgsMTk4Ljc5OSAxOTUuNDM3LDI5NS42MzYgICIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" width="250" height="250" />
+
+
+<style>
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+
+
+body {
+	background: #8BC34A;
+	color: #fff;
+	font-weight: 400;
+	font-size: 1em;
+	font-family: 'Lato', Arial, sans-serif;
+	margin:0;
+	padding:0;
+	padding-bottom:60px;
+}
+.ccheader {
+	margin: 0 auto;
+	padding: 2em;
+	text-align: center;
+}
+
+.ccheader h1 {
+	margin: 0;
+	font-weight: 300;
+	font-size: 2.5em;
+	line-height: 1.3;
+}
+.ccheader {
+	margin: 0 auto;
+	padding: 2em;
+	text-align: center;
+}
+
+.ccheader h1 {
+	margin: 0;
+	font-weight: 300;
+	font-size: 2.5em;
+	line-height: 1.3;
+}
+
+/* Form CSS*/
+.ccform {
+   margin: 0 auto;
+    width: 800px;
+    
+}
+.ccfield-prepend{
+	margin-bottom:10px;
+	width:100%;
+    float: left;
+    
+    
+}
+
+.ccform-addon{
+	color:#f8ae45; 
+	float:left;
+	padding:8px;
+	width:8%;
+	background:#FFFFFF;
+	text-align:center;	
+}
+
+.ccformfield {
+	color:#000000; 
+	background:#FFFFFF;
+	border:none;
+	padding:15.5px;
+	width:91.9%;
+	display:block;
+	font-family: 'Lato',Arial,sans-serif;
+	font-size:14px;
+}
+
+.ccformfield {
+	font-family: 'Lato',Arial,sans-serif;
+}
+.ccbtn{
+	display:block;
+	border:none;
+	background:#f8ae45;
+	color:#FFFFFF;
+	padding:12px 25px;
+	cursor:pointer;
+	text-decoration:none;
+	font-weight:bold;
+    float: right;
+   
+}
+.ccbtn:hover{
+	background:#d8850e;
+
+}
+.credit {
+  width: 800px;
+  clear:both;
+margin:0 auto;
+  line-height:25px;
+ padding: 25px 50px; 
+text-align: center;
+}
+.credit em{
+margin-right:5px;
+}
+.credit a {
+color: #000;
+font-weight: bold;
+text-decoration: none;
+}
+	</style>
+
+    <h1>Den glada Geten</h1>
+    <h2>Formulär</h2>
+</header>
+<div class="wrapper">
+    <form method="post" action="" class="ccform">
+    
+      <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-user fa-2x"></i></span>
+        <input class="ccformfield" type="text" placeholder="Förnamn" required>
+      </div>
+      
+    <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-envelope fa-2x"></i></span>
+        <input class="ccformfield" type="text" placeholder="Email" required>
+    </div>
+      
+    <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-mobile-phone fa-2x"></i></span>
+        <input class="ccformfield" type="text" placeholder="Telefonnummer">
+    </div>
+      
+ 
+ 
+      
+<div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-calendar"fa-2x"></i></span>
+		<input type="date" id="depart" class="floatLabel" name="depart" value="<?php echo date('Y-m-d'); ?>" />
+		<label for="depart" class="label-date">&nbsp;&nbsp;Checka in</label>
+        </div>
+
+  <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-calendar"fa-2x"></i></span>
+		<input type="date" id="depart" class="floatLabel" name="depart" value="<?php echo date('Y-m-d'); ?>" />
+		<label for="depart" class="label-date">&nbsp;&nbsp;Checka ut</label>
+        </div>
+      
+ <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-user"fa-2x"></i></span>
+       <select class="floatLabel">
+          <option value="blank"></option>
+          <option value="1">1</option>
+          <option value="2">2</option> 
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+         <label for="people" class="person">&nbsp;&nbsp;Personer</label>
+    </div>
+
+
+    <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-sort"fa-2x"></i></span>
+        <select class="floatLabel">
+        <option value="blank"></option>
+        <option value="deluxe" selected>Enkel
+        <option value="Zuri-zimmer">Dubbel</option>
+      </select>
+         <label for="room" class="room">&nbsp;&nbsp;rum</label>
+    </div>
+
+
+    <div class="ccfield-prepend">
+        <input class="ccbtn" type="Skicka" value="Skicka">
+    </div>

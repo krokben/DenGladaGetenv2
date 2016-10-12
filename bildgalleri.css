@@ -1,0 +1,63 @@
+.gallery-container {
+    z-index: 1;
+    position: relative;
+    margin: auto;
+    width: 75%;
+    padding: 20px;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding 0;
+}
+
+.mini {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+
+.big {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color:rgba(0,0,0,0.9);
+}
+
+.bigimg {
+    display: flex;
+    margin: auto;
+    opacity: 1;
+    height: 40em;
+    width: 40em;
+    border: 1em solid white;
+}
+
+.button {
+    margin: auto;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    border: 1px solid white;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgba(255,255,255,0.9);
+    color: black;
+    cursor: pointer;
+}
+
+
+.button .content {
+    margin: auto;
+    display: flex;
+    text-align: center;
+}

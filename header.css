@@ -1,0 +1,10 @@
+.logo {
+	width: 100px;
+	height: 100px;
+	padding: 5px;
+}
+
+.upperHeader {
+    background-image: url("images/header.png");
+    height: 150px;
+}
