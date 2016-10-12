@@ -1,75 +1,92 @@
-<div class="container-fluid text-center">
-  <div class="row content">
-    <div class="wrapper">
-    <form method="post" action="" class="ccform">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bokning</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="bokning.css">
+</head>
+<body>
+    <div w3-include-html="header.html"></div>
+    <div w3-include-html="menu.html"></div>
+    <div class="container-fluid text-center">
+      <div class="row content">
+        <div class="wrapper">
+        <form method="post" action="" class="ccform">
 
-      <div class="ccfield-prepend">
-        <span class="ccform-addon"><i class="fa fa-user fa-2x"></i></span>
-        <input class="ccformfield" type="text" placeholder="Förnamn Efternamn" required>
-      </div>
+          <div class="ccfield-prepend">
+            <span class="ccform-addon"><i class="fa fa-user fa-2x"></i></span>
+            <input class="ccformfield" type="text" placeholder="Förnamn Efternamn" required>
+          </div>
 
-    <div class="ccfield-prepend">
-        <span class="ccform-addon"><i class="fa fa-envelope fa-2x"></i></span>
-        <input class="ccformfield" type="text" placeholder="Email" required>
-    </div>
-
-    <div class="ccfield-prepend">
-        <span class="ccform-addon"><i class="fa fa-mobile-phone fa-2x"></i></span>
-        <input class="ccformfield" type="text" placeholder="Telefonnummer">
-    </div>
-
-
-
-
-<div class="ccfield-prepend">
-        <span class="ccform-addon"><i class="fa fa-calendar"fa-2x"></i></span>
-    <input type="date" id="depart" class="floatLabel" name="depart" value="<?php echo date('Y-m-d'); ?>" />
-    <label for="depart" class="label-date">&nbsp;&nbsp;Checka in</label>
+        <div class="ccfield-prepend">
+            <span class="ccform-addon"><i class="fa fa-envelope fa-2x"></i></span>
+            <input class="ccformfield" type="text" placeholder="Email" required>
         </div>
 
-  <div class="ccfield-prepend">
-        <span class="ccform-addon"><i class="fa fa-calendar"fa-2x"></i></span>
-    <input type="date" id="depart" class="floatLabel" name="depart" value="<?php echo date('Y-m-d'); ?>" />
-    <label for="depart" class="label-date">&nbsp;&nbsp;Checka ut</label>
+        <div class="ccfield-prepend">
+            <span class="ccform-addon"><i class="fa fa-mobile-phone fa-2x"></i></span>
+            <input class="ccformfield" type="text" placeholder="Telefonnummer">
         </div>
 
- <div class="ccfield-prepend">
-        <span class="ccform-addon"><i class="fa fa-user"fa-2x"></i></span>
-       <select class="floatLabel">
-          <option value="blank"></option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-         <label for="people" class="person">&nbsp;&nbsp;Personer</label>
-    </div>
+
 
 
     <div class="ccfield-prepend">
-        <span class="ccform-addon"><i class="fa fa-sort"fa-2x"></i></span>
-        <select class="floatLabel">
-        <option value="blank"></option>
-        <option value="deluxe" selected>Enkel
-        <option value="Zuri-zimmer">Dubbel</option>
-      </select>
-         <label for="room" class="room">&nbsp;&nbsp;rum</label>
+        <span class="ccform-addon"><i class="fa fa-calendar fa-2x"></i></span>
+        <input type="date" id="depart" class="floatLabel" name="depart" value="<?php echo date('Y-m-d'); ?>" />
+        <label for="depart" class="label-date">&nbsp;&nbsp;Checka in</label>
     </div>
 
-
-    <div class="ccfield-prepend">
-        <input class="ccbtn" type="Skicka" value="Skicka">
+     <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-calendar fa-2x"></i></span>
+        <input type="date" id="depart2" class="floatLabel" name="depart2" value="<?php echo date('Y-m-d'); ?>" />
+        <label for="depart2" class="label-date">&nbsp;&nbsp;Checka ut</label>
     </div>
 
-    </div>
-    </div>
-    </div>
+     <div class="ccfield-prepend">
+            <span class="ccform-addon"><i class="fa fa-user fa-2x"></i></span>
+           <select class="floatLabel">
+              <option value="blank"></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+             <label for="people" class="person">&nbsp;&nbsp;Personer</label>
+        </div>
 
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
 
-</footer>
-<script src="script.js"></script>
+        <div class="ccfield-prepend">
+            <span class="ccform-addon"><i class="fa fa-sort fa-2x"></i></span>
+            <select class="floatLabel">
+            <option value="blank"></option>
+            <option value="deluxe" selected>Enkel</option>
+            <option value="Zuri-zimmer">Dubbel</option>
+          </select>
+             <label for="room" class="room">&nbsp;&nbsp;rum</label>
+        </div>
+
+
+        <div class="ccfield-prepend">
+            <input class="ccbtn" type="Skicka" value="Skicka">
+        </div>
+
+    </form>
+</div>
+</div>
+</div>
+    <div w3-include-html="footer.html"></div>
+    <script>
+        w3IncludeHTML();
+    </script>
 </body>
 </html>
