@@ -1,76 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bokning</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="http://www.w3schools.com/lib/w3data.js"></script>
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="menu.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="info.css">
+  <title>Den glada geten</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="http://www.w3schools.com/lib/w3data.js"></script>
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="info.css">
 </head>
 <body>
     <div w3-include-html="header.html"></div>
     <div w3-include-html="menu.html"></div>
-    <div>
-           <div id="findUs" class="jumbotron">
-               Hitta hit</div>
+<div class="container-fluid">
+    <div id="findUs" class="jumbotron">Hitta hit</div> <!-- Hitta hit -->
+    <div id="map"></div> <!-- Karta -->
+    <div class="jumbotron text-center" id="adress"> <!-- Adress -->
+        <h1 class="mapText">Bergmästaregatan 7<br />981 33 Kiruna</h1> <br />
+    </div>
+    <div class="col-xs-12" id="directions"> <h3 class="heading">Med flyg</h3> <!-- Direktioner -->
+        <p class="paragraph">Från Arlanda, Skavsta och Bromma flygplats tar ni snabbt och smidigt flygbussen eller Arlanda Express in till Cityterminalen. Därifrån är det endast 500 meter till vandrarhemmet. För att komma till vandrarhemmet går ni över kungsbron längs Fleminggatans södra sida tills ni kommer till fram Fleminggatan 19.</p>
+        <h3 class="heading">Med bil</h3>
+        <p class="paragraph">Parkeringshus finns ett kvarter bort på Carl-gustaf Lindstedts gata. Det går också alldeles utmärkt att finna en parkeringsplats på gatan i närområdet, vilket blir avsevärt billigare än parkeringshus förutsatt att man följer bestämmelserna.</p>
+        <h3 class="heading">Med buss</h3>
+        <p class="paragraph">Buss nummer 1 och 56 stannar några tiotal meter utanför vandrarhemmet.</p>
+        <h3 class="heading">Till fots</h3>
+        <p class="paragraph">We're in Kiruna! :') We advise you to get on a flight. Don't try to walk here. You will die.</p>
+    </div>
+    <div class="contact"> <!-- Kontakt -->
+        <ul class ="col-xs-12" id="list">
+            <li><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span><a id="callUs" href="#"> 0705092312</a></li>
+            <li><span class="glyphicon glyphicon-send" aria hidden="true"></span><a id="emailUs" href="#"> denglade@geten.se</a></li>
+            <li><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><a id="likeUs" href="https://facebook.com"> facebook</a></li>
+        </ul>
+    </div>
+</div>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_STAiy9Xykx7mor4RU2VQDmjf1jrmbXk&callback=initMap"></script>
+<script>
+function initMap() {
+var denGladeGeten = { lat: 67.86434, lng: 20.21498 };
+var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 14,
+    center: denGladeGeten,
+    scrollwheel: false
 
-               <div id="map"></div>
-         <div class="jumbotron text-center" id="adress">
+});
+var marker = new google.maps.Marker({
+    position: denGladeGeten,
+    map: map
 
-
-           <h1 class="mapText">Bergmästaregatan 7<br />981 33 Kiruna</h1> <br />
-                  </div>
-           <div class="col-xs-8" id="directions"> <h3 class="heading">Med flyg</h3>
-                   <p class="paragraph">Från Arlanda, Skavsta och Bromma flygplats tar ni snabbt och smidigt flygbussen eller Arlanda Express in till Cityterminalen. Därifrån är det endast 500 meter till vandrarhemmet. För att komma till vandrarhemmet går ni över kungsbron längs Fleminggatans södra sida tills ni kommer till fram Fleminggatan 19.</p>
-                   <h3 class="heading">Med bil</h3>
-                   <p class="paragraph">Parkeringshus finns ett kvarter bort på Carl-gustaf Lindstedts gata. Det går också alldeles utmärkt att finna en parkeringsplats på gatan i närområdet, vilket blir avsevärt billigare än parkeringshus förutsatt att man följer bestämmelserna.
-   </p>
-             <h3 class="heading">Med buss</h3>
-             <p class="paragraph">Buss nummer 1 och 56 stannar några tiotal meter utanför vandrarhemmet.</p>
-             <h3 class="heading">Till fots</h3>
-             <p class="paragraph">We're in Kiruna! :') We advise you to get on a flight. Don't try to walk here. You will die.</p>
-           </div>
-           <div class="contact">
-           <ul class ="col-xs-8" id="list">
-       <li><span class="glyphicon glyphicon-phone-alt
-   " aria-hidden="true"></span><a id="callUs" href="#"> 0705092312</a></li>
-                     <li><span class="glyphicon glyphicon-send" aria hidden="true"></span><a id="emailUs" href="#"> denglade@geten.se</a></li>
-                     <li><span class="glyphicon glyphicon-thumbs-up
-   " aria-hidden="true"></span><a id="likeUs" href="https://facebook.com"> facebook</a></li>
-
-                 </ul>
-
-               <div class="logo">
-                   <img src="goat.png" />
-               </div>
-           </div>
-   </div>
-       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_STAiy9Xykx7mor4RU2VQDmjf1jrmbXk&callback=initMap">
-       </script>
-       <script>
-       function initMap() {
-       var denGladeGeten = { lat: 67.86434, lng: 20.21498 };
-       var map = new google.maps.Map(document.getElementById('map'), {
-           zoom: 14,
-           center: denGladeGeten,
-           scrollwheel: false
-
-       });
-       var marker = new google.maps.Marker({
-           position: denGladeGeten,
-           map: map
-
-       });
+});
 
 
-   }
-       </script>
+}
+</script>
     <div w3-include-html="footer.html"></div>
     <script>
         w3IncludeHTML();
