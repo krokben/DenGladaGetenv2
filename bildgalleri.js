@@ -1,60 +1,66 @@
-/**
- * Created by Mattias on 2016-10-01.
- */
-/*var Gallery = {
+var Gallery = {
+
     init: function() {
+        this.cacheDom();
         this.bindEvents();
     },
 
-    bindEvents: function() {
-        $('.mini').on('click', this.showImg);
-        $('.switchImg').on('click', this.switchImg);
+    cacheDom: function() {
+        this.$el = $('#gallery');
+        this.$mini = this.$el.find('.mini');
+        this.$big = this.$el.find('.big');
+        this.$bigimg = this.$el.find('.bigimg');
+        this.$leftbtn = this.$el.find('.leftbtn');
+        this.$rightbtn = this.$el.find('.rightbtn');
     },
 
-    showImg: function() {
-        console.log(this);
+    bindEvents: function () {
+        this.$mini.on('click', this.showImg);                   //Array med bilderna
+        /*this.$big.on('click', this.hideImg.bind(this));*/     //Fixa så att det går att trycka på knapparna
+        this.$bigimg.on('click', this.hideImg.bind(this));
+        this.$leftbtn.on('click', this.prevImg.bind(this));
+        this.$rightbtn.on('click', this.nextImg.bind(this));
     },
 
-    switchImg: function() {
-        console.log(this);
+    imgPos: 0,
+
+    showImg: function () {
+        var self = Gallery;
+        self.imgPos = self.$mini.index(this);
+        self.$big.fadeIn('fast').css('display', 'flex');
+        self.$el.css('overflow', 'hidden').css('position', 'fixed');
+        self.$bigimg.attr('src', this.src);
+    },
+
+    hideImg: function () {
+        this.$big.fadeOut('fast');
+        this.$el.css('overflow', 'scroll').css('position', 'relative');
+    },
+
+    prevImg: function () {
+        this.imgPos = this.imgPos - 1;
+        this.checkArrayLength(this.imgPos);
+        this.$bigimg.attr('src', this.$mini[this.imgPos].src);
+    },
+
+    nextImg: function () {
+        this.imgPos = this.imgPos + 1;
+        this.checkArrayLength(this.imgPos);
+        this.$bigimg.attr('src', this.$mini[this.imgPos].src);
+    },
+
+    checkArrayLength: function (pos) {
+        var self = Gallery;
+        if (pos < 0) {
+            self.imgPos = self.$mini.length -1;
+        }
+        else if (pos > self.$mini.length - 1) {
+            self.imgPos = 0;
+        }
+        else {
+            return self.imgPos;
+        }
     }
-
-
 };
 
-Gallery.init(); */
-
-$(window).on('load', function() {
-
-
-    var pics = $('.mini').on('click', function () {             //Gör en array av alla bilder med class .mini
-        $('.big').fadeIn('fast').css('display', 'flex');        //Visar en förstorad variant av bilden som klickades på
-        $('.bigimg').on('click', function () {                  //Återgå till galleri-läget vid klick på förstorad bild
-            $('.big').fadeOut('fast');                          //
-        }).attr('src', this.src);
-        that = pics.index(this);
-    });
-
-    $('.leftbtn').on('click', function () {
-        that--;
-        checkArrayLength(that);
-        $('.bigimg').attr('src', pics[that].src);
-    });
-
-    $('.rightbtn').on('click', function () {
-        that++;
-        checkArrayLength(that);
-        $('.bigimg').attr('src', pics[that].src);
-    });
-
-    function checkArrayLength(num) {
-        if(num < 0) {
-            that = pics.length - 1;
-        }
-        else if(num > pics.length - 1) {
-            that = 0;
-        }
-    }
-
-});
-
+Gallery.init();
