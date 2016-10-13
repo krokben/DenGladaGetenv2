@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="container-fluid upperHeader"></div> <!-- Header -->
-    <div id="menuBar"></div>
+    <div w3-include-html="header.html"></div>
+    <div w3-include-html="menu.html"></div>
     <div>
            <div id="findUs" class="jumbotron">
                Hitta hit</div>
@@ -72,6 +72,9 @@
 
    }
        </script>
+    <script>
+        w3IncludeHTML();
+    </script>
     <div w3-include-html="footer.html"></div>
     <script src="main.js"></script>
 </body>
