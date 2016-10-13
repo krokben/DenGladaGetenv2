@@ -1,4 +1,4 @@
-.gallery-container {
+.container-css {
     z-index: 1;
     position: relative;
     margin: auto;
@@ -6,21 +6,18 @@
     padding: 20px;
 }
 
-body {
-    position: relative;
-    margin: 0;
-    padding 0;
-}
-
 .mini {
     width: 100%;
     margin-bottom: 20px;
-    border: 1px solid black;
+}
+
+.mini:hover {
+    cursor: pointer;
 }
 
 .big {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -29,16 +26,23 @@ body {
     background-color:rgba(0,0,0,0.9);
 }
 
+.img-container {
+    display: flex;
+    margin: auto;
+}
+
 .bigimg {
+    position: relative;
     display: flex;
     margin: auto;
     opacity: 1;
-    height: 40em;
-    width: 40em;
+    height: 400px;
+    width: 400px;
     border: 1em solid white;
 }
 
 .button {
+    /*position: absolute;*/
     margin: auto;
     display: flex;
     height: 50px;
@@ -60,4 +64,17 @@ body {
     margin: auto;
     display: flex;
     text-align: center;
+}
+
+
+.leftbtn {
+    position: absolute;
+    top: 50%;
+    left: 1%;
+}
+
+.rightbtn {
+    position: absolute;
+    top: 50%;
+    right: 1%;
 }
