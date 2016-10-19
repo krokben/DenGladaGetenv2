@@ -171,3 +171,30 @@
 }
 
 .ui-datepicker-other-month .ui-state-default { color: #CCCCCC; }
+
+
+#submit {
+    width: 100%;
+    border-radius: 3px;
+    font-family: 'Lobster', cursive;
+
+}
+
+#date {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.nights {
+    float: right;
+    widht: 40%;
+}
+
+.para {
+    margin-top: 5px;
+}
+
+.bookHead {
+    font-family: 'Lobster', cursive;
+    font-size: 1.5em;
+}

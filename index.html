@@ -62,18 +62,32 @@
     </div>
     </div>
 
-    <div class="container-fluid text-center">
+    <div class="container-fluid">
         <div class="row content">
             <div class="col-sm-2 sidenav">
-                <input type="text" id="calendar">
-                <script>
-                $('#calendar').datepicker({
-                inline: true,
-                firstDay: 1,
-                showOtherMonths: true,
-                dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
-                });
-                </script>
+                <div class="col-sm-12 hej">
+                    <form id="bookingForm">
+                        <fieldset>
+                            <p class="bookHead">Sök lediga rum</p>
+                            <p>Datum för incheckning
+                            <input type="date" id="date" Value="Incheckning" required></p>
+                            <p class="para">Antal nätter
+                            <select class="nights" name="nights">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                            </select></p>
+                            <input class="btn-primary" id="submit" name="submit" type=submit value="Sök" />
+                        </fieldset>
+                    </form>
+                </div>
             </div>
         </div>
 
