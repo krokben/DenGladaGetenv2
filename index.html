@@ -70,9 +70,14 @@
                         <fieldset>
                             <p class="bookHead">Sök lediga rum</p>
                             <p>Datum för incheckning
-                            <input id="date" Value="Incheckning" required></p>
+                            <div class="input-group date" data-provide="datepicker">
+                                <input type="text" class="form-control datepicker" value="Datum" required>
+                                <div class="input-group-addon">
+                                    <span class="glyphicon glyphicon-th"></span>
+                                </div>
+                            </div></p>
                             <p class="para">Antal nätter
-                            <select class="nights" name="nights">
+                            <select class="form-control nights" name="nights">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
