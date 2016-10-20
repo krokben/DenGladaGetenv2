@@ -1,6 +1,25 @@
-/* Set black background color, white text and some padding */
 footer {
-	background-color: grey;
-	color: white;
-	padding: 15px;
+    clear: both;
+    background-color: grey;
+    padding: 15px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    opacity: 0.8;
+}
+
+footer a:hover {
+    color: white;
+    opacity: 1;
+    background-color: grey !important;
+}
+
+#vector {
+  opacity: 0.3;
+}
+
+#vector:hover {
+    opacity:0.5;
 }
