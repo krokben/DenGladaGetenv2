@@ -19,3 +19,7 @@
 .navbar-header {
     padding-left: 10px;
 }
+
+.gladaGetenNavbar a:hover{
+    color: #333 !important;
+}
