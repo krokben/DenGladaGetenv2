@@ -8,15 +8,45 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="http://www.w3schools.com/lib/w3data.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="bildgalleri.css">
 </head>
 <body>
-    <div w3-include-html="header.html"></div>
-    <div w3-include-html="menu.html"></div>
+    <!-- Header -->
+    <div class="container-fluid upperHeader">
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Den glada geten</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a id="hem" href="index.html">Hem</a></li>
+                    <li class="active"><a id="bildgalleri" href="bildgalleri.html">Bildgalleri</a></li>
+                    <li><a id="bokning" href="bokning.html">Bokning</a></li>
+                    <li><a id="om" href="#">Om</a></li>
+                    <li><a id="info1" href="info.html">Info</a></li>
+                    <li><a id="kontakt" href="#">Kontakt</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logga in</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bildgalleri -->
     <div id="gallery">
         <div class="big">
 
@@ -68,10 +98,12 @@
             </div>
         </div>
     </div>
-    <div w3-include-html="footer.html"></div>
+    <!-- Footer -->
+    <footer class="container-fluid text-center">
+      <a href="http://www.freepik.com/free-photos-vectors/cloud">Cloud vector designed by Freepik</a>
+    </footer>
+
+    <!-- Scripts -->
     <script src="bildgalleri.js"></script>
-    <script>
-        w3IncludeHTML();
-    </script>
 </body>
 </html>
