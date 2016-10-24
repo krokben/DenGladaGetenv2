@@ -14,6 +14,11 @@
 
 .navbar-brand {
     font-family: 'Lobster', cursive;
+    color: #39B647 !important;
+}
+
+.navbar-brand:hover {
+    color: #000 !important;
 }
 
 .navbar-header {
@@ -22,4 +27,8 @@
 
 .gladaGetenNavbar a:hover{
     color: #333 !important;
+}
+
+.active {
+    background: #39B647 !important;
 }
