@@ -8,3 +8,7 @@
     background-image: url("images/header.png");
     height: 150px;
 }
+
+.testpadding {
+	padding: 0;
+}
