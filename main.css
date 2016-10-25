@@ -236,3 +236,7 @@ body {
     display: inline-block;
     margin-top: 10px;
 }
+
+.heigthfix {
+    height: 100%;
+}
