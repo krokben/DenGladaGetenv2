@@ -1,7 +1,7 @@
 function initMap() {
 var denGladeGeten = { lat: 67.86434, lng: 20.21498 };
 var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 14,
+    zoom: 8,
     center: denGladeGeten,
     scrollwheel: false
 
