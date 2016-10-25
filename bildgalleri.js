@@ -28,7 +28,6 @@ var Gallery = {
         var self = Gallery;
         self.imgPos = self.$mini.index(this);
         self.$big.fadeIn('fast').css('display', 'flex');
-        self.$el.css('overflow', 'hidden').css('position', 'fixed');
         self.$bigimg.attr('src', this.src);
     },
 
