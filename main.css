@@ -45,15 +45,12 @@
     border-spacing: 0;
 }
 
-.ui-datepicker table {
-  border: 1px solid #CCCCCC;
-}
-
 .ui-datepicker {
     display: none;
-    width: 198px;
+    width: 202px;
     padding: 0;
     cursor: default;
+    border: 1px solid #ccc;
 
     text-transform: uppercase;
     font-family: Tahoma;
@@ -164,9 +161,15 @@
     border: 1px solid transparent;
 }
 
+.ui-datepicker-calendar .ui-state-default:hover {
+    color: #39B647;
+    border: 1px solid #39B647;
+    border-radius: 5px;
+}
+
 .ui-datepicker-calendar .ui-state-active {
-    color: #a5cd4e;
-    border: 1px solid #a5cd4e;
+    color: #39B647;
+    border: 1px solid #39B647;
     border-radius: 5px;
 }
 
