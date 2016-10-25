@@ -209,3 +209,30 @@ body {
 .testpadding {
     padding: 0;
 }
+
+.loginForm {
+    width: 250px;
+    background: #F1F1F1;
+    border: 0;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+    border-radius: 13px;
+}
+
+.loginForm input {
+    margin-bottom: 5px;
+}
+
+.loginSubmit {
+    background: #39B647;
+    border: 0;
+    box-shadow: 1px 1px 0 0 #0B821A;
+    height: 35px;
+    width: 150px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
