@@ -1,3 +1,11 @@
+body {
+  background: #EDE6DE;
+}
+
+.temp {
+  height: 500px;
+}
+
 .ccform {
    margin: 0 auto;
     width: 800px;

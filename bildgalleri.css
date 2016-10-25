@@ -1,3 +1,7 @@
+body {
+    background: #EDE6DE;
+}
+
 .container-css {
     z-index: 1;
     position: relative;
