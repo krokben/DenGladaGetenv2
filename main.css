@@ -16,7 +16,14 @@
         height: auto;
         padding: 15px;
       }
-      .row.content {height:auto;}
+      .row.content {
+        height:auto;
+      }
+      .col-sm-10 {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 20px;
+      }
     }
 
     /* CSS för slideshow: */
@@ -206,6 +213,8 @@ body {
     background: #EDE6DE;
     font-family: 'Raleway', sans-serif;
 }
+
+
 
 .testpadding {
     padding: 0;
