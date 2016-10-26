@@ -241,3 +241,9 @@ body {
 .heigthfix {
     height: 100%;
 }
+
+.slide-pics {
+    /*position: absolute;*/
+    min-width: 1280px;
+    height: 200px !important;
+}

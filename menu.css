@@ -18,14 +18,11 @@
 .navbar-brand {
     font-family: 'Lobster', cursive;
     color: #39B647 !important;
+    padding-left: 30px;
 }
 
 .navbar-brand:hover {
     color: #000 !important;
-}
-
-.navbar-header {
-    padding-left: 10px;
 }
 
 .gladaGetenNavbar a:hover{
@@ -39,3 +36,19 @@
 .active2 a {
     color: #fff !important;
 }
+
+@media screen and (max-width: 767px) {
+    .navbar-header-small {
+        padding-right: 10px;
+    }
+
+    .navbar-collapse {
+        padding-right: 40px;
+        overflow-y: hidden;
+    }
+    body {
+        overflow-y: hidden;
+    }
+
+}
+
