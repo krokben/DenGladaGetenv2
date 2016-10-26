@@ -1,6 +1,6 @@
 <?php
 
-if($_POST['username'] == "tobias" && $_POST['password'] == "hej") {
+if($_POST['username'] == "glada" && $_POST['password'] == "geten") {
     echo "success";
 }
 else {

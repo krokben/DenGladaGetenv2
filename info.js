@@ -12,5 +12,12 @@ var marker = new google.maps.Marker({
 
 });
 
-
 }
+
+$.ajax({
+            url : "text/infoheader1.txt",
+            dataType: "text",
+            success : function (data) {
+                $("#infoheader1").html(data);
+            }
+        });
