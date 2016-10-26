@@ -19,9 +19,9 @@ footer a:hover {
 }
 
 #vector {
-  opacity: 0.3;
+  opacity: 0.15;
 }
 
 #vector:hover {
-    opacity:0.5;
+    opacity:0.4;
 }
