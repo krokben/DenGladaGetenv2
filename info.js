@@ -21,3 +21,40 @@ $.ajax({
                 $("#infoheader1").html(data);
             }
         });
+
+var u = document.cookie[0] + document.cookie[1] + document.cookie[2] + document.cookie[3] + document.cookie[4];
+    p = document.cookie[6] + document.cookie[7] + document.cookie[8] + document.cookie[9] + document.cookie[10];
+    $.post("login.php", { username: u, password: p }, function (response) {
+        if (response == "success") {
+            console.log("ok!");
+            var paragraph = document.getElementsByClassName("paragraph");
+            for (i = 0; i < paragraph.length; i++) {
+                paragraph[i].setAttribute("contentEditable", true);
+            }
+        }
+        else {
+            console.log("nej");
+        }
+    });
+
+// Läs data från data.txt
+var paragraph1 = document.getElementById("paragraph1");
+
+$.ajax({
+            url : "data.txt",
+            dataType: "text",
+            success : function (data) {
+                $("#paragraph1").html(data);
+            }
+        });
+// Ändra paragraf och spara i data.txt
+$("#paragraph1").blur(function(){
+   var myText = $("#paragraph1").html();
+   console.log('Textarea: '+myText);
+   var url ="save.php";
+   $.post(url, { myText: myText }, function(data){
+   console.log('response from the callback function: '+ data);
+   }).fail(function(jqXHR){
+     alert(jqXHR.status +' '+jqXHR.statusText+ ' $.post failed!');
+  });
+});
