@@ -30,6 +30,7 @@ var u = document.cookie[0] + document.cookie[1] + document.cookie[2] + document.
             var paragraph = document.getElementsByClassName("paragraph");
             for (i = 0; i < paragraph.length; i++) {
                 paragraph[i].setAttribute("contentEditable", true);
+                paragraph[i].setAttribute("contentEditable", true);
             }
         }
         else {
@@ -58,3 +59,14 @@ $("#paragraph1").blur(function(){
      alert(jqXHR.status +' '+jqXHR.statusText+ ' $.post failed!');
   });
 });
+
+// Rich text editor
+[].forEach.call(document.querySelectorAll("[data-edit]"), function(btn) {
+  btn.addEventListener("click", edit, false);
+});
+
+function edit(event) {
+  event.preventDefault();
+  var cmd_val = this.dataset.edit.split(":");
+  document.execCommand(cmd_val[0], false, cmd_val[1]);
+}
