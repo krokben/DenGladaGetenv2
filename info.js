@@ -32,9 +32,11 @@ var u = document.cookie[0] + document.cookie[1] + document.cookie[2] + document.
                 paragraph[i].setAttribute("contentEditable", true);
                 paragraph[i].setAttribute("contentEditable", true);
             }
+            document.getElementById("boldButton").style.display = "block";
         }
         else {
             console.log("nej");
+            document.getElementById("boldButton").style.display = "none";
         }
     });
 
