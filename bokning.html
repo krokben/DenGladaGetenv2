@@ -1,20 +1,20 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Bokning</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="images/favicon.ico" type="image/png" sizes="16x16">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="http://www.w3schools.com/lib/w3data.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="bokning.css">
-    <link rel="stylesheet" href="menu.css">
+  <title>Den glada geten</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/favicon.ico" type="image/png" sizes="16x16">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="footer.css">
 </head>
 <body>
     <!-- Header -->
@@ -46,7 +46,60 @@
 
 
     <!-- Bokning -->
-    
+
+
+<!--Dropdown-->
+<div class="form-group">
+  <label for="sel1">Antal gäster</label>
+  <select class="form-control" id="sel1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+    </select>
+</div>
+
+  <!--Input box-->
+  <div class="form-group">
+    <label for="email">Förnamn:</label>
+    <input type="text" class="form-control" id="email">
+  </div>
+
+  <div class="form-group">
+    <label for="pwd">Efternamn</label>
+    <input type="text" class="form-control" id="pwd">
+  </div>
+
+  <div class="form-group">
+    <label for="pwd">Email</label>
+    <input type="text" class="form-control" id="pwd">
+  </div>
+
+  <div class="form-group">
+    <label for="pwd">Bekräfta Email</label>
+    <input type="text" class="form-control" id="pwd">
+  </div>
+  
+
+  <!--datepicker-->
+  <div class="input-group date" data-provide="datepicker">
+      <input type="text" class="form-control datepicker">
+
+      <div class="input-group-addon">
+          <span class="glyphicon glyphicon-th"></span>
+      </div>
+
+  </div>
+
+
+
+
+
+
 
     <!-- Footer -->
     <footer class="container-fluid text-center">
@@ -66,5 +119,6 @@
         </ul>
     </footer>
 
-</body>
+      <script src="bokning.js"></script>
+    </body>
 </html>
