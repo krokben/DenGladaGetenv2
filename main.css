@@ -26,17 +26,17 @@
 
     /* CSS för slideshow: */
 
-    .container-fluid {
+  /*  .container-fluid {
       padding-left: 0;
       padding-right: 0;
     }
     .carousel-inner {
       height: 200px;
     }
-    .carousel-inner img {
+    .carousel-inner img { */
       /*border: 10px solid red;*/
-      width: 100%;
-    }
+    /*  width: 100%;
+    } */
     /* CSS för kalender: */
 
     .ui-datepicker,
@@ -267,4 +267,9 @@ body {
 }
 img{
    box-shadow: 2px 2px 5px #888888;
+}
+
+.rubrik{
+margin-bottom: 1px;
+font-weight: bold;
 }
