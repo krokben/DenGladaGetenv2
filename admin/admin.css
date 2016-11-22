@@ -1,5 +1,6 @@
 body {
     font-family: 'Raleway', sans-serif;
+    color: #333333;
 }
 
 .flex-container {
@@ -42,7 +43,7 @@ footer {background: #aaa;color:white;}
 }
 
 .nav-btn {
-    background-color: black;
+    background-color: #333333;
     text-align: center;
     margin: 5px;
     height: 25px;
@@ -53,10 +54,11 @@ footer {background: #aaa;color:white;}
 
 .book-item {
     color: white;
-    background-color: black;
+    background-color: #333333;
     width: 300px;
     padding: 10px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .book-item p {
