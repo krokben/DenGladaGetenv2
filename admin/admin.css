@@ -19,12 +19,18 @@ body {
 }
 
 header {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #333333;
 }
+
+.admin {
+    margin: auto;
+    padding: 0;
+}
+
 footer {background: #aaa;color:white;}
 
 .nav {
-    border-right: 1px solid black;
+    border-right: 1px solid #333333;
 }
 
 .nav ul {
@@ -78,8 +84,27 @@ footer {background: #aaa;color:white;}
     margin-top: 15px !important;
 }
 
+.pic-container {
+    border: 1px solid #333333;
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    color: white;
+    border-radius: 5px;
+}
+
+.pic {
+    width: 200px;
+}
 
 
+.pic-btns {
+    display: flex;
+}
+
+.pic-btns button {
+    flex-grow: 1;
+}
 
 
 
