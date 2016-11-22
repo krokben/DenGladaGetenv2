@@ -1,0 +1,56 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+
+.flex-container > * {
+    padding: 15px;
+    flex: 1 100%;
+}
+
+    text-align: left;
+}
+
+header {
+    border-bottom: 1px solid black;
+}
+footer {background: #aaa;color:white;}
+
+.nav {
+    border-right: 1px solid black;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav ul li div {
+    display: flex;
+    align-items: center;
+}
+
+.nav ul a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-btn {
+    background-color: black;
+    text-align: center;
+    margin: 5px;
+    height: 25px;
+    border-radius: 5px;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.book-item {
+    color: white;
+    background-color: black;
+    width: 300px;
+    padding: 10px;
