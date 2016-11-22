@@ -58,6 +58,10 @@ footer {background: #aaa;color:white;}
     vertical-align: middle;
 }
 
+.nav-btn:hover {
+    background-color: black;
+}
+
 .book-item {
     color: white;
     background-color: #333333;
@@ -68,9 +72,13 @@ footer {background: #aaa;color:white;}
 }
 
 .book-item p {
-    display: block;
     margin: 2px;
 }
+
+.info-div {
+    margin: 10px 0;
+}
+
 
 .fl-right {
     float: right;
