@@ -1,5 +1,73 @@
 body {
-  background: #EDE6DE;
+  background: #FFFDFA;
+}
+
+.bookingMain {
+    margin: 0;
+}
+
+.bookingFieldset {
+    background: #F1F1F1;
+    margin: 15px auto;
+    padding: 0 15px 15px 15px;
+    border-radius: 5px;
+}
+
+.bookingFieldset input, select {
+    width: 100%;
+    border-radius: 2px;
+    box-shadow: none;
+    border: 0;
+    padding-left: 10px;
+    /*margin-bottom: 10px;*/
+}
+
+.bookingFieldset select {
+
+}
+
+.submitButton {
+    margin-top: 15px;
+    background-color: #39B647;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.bookingSecondary {
+    /*margin: 15px;*/
+    padding: 0;
+    box-sizing: content-box;
+}
+
+.bookingSecondary div {
+    padding: 15px 15px 0 0;
+}
+.bookingSecondary div div {
+    width: 96%;
+    height: 15.2vh;
+    background: #F1F1F1;
+    border-radius: 5px;
+}
+
+.bookingSecondary2 {
+    /*margin: 15px;*/
+    padding: 0;
+    box-sizing: content-box;
+}
+
+.bookingSecondary2 div {
+    padding: 15px 15px 0 0;
+}
+.bookingSecondary2 div div {
+    width: 96%;
+    height: 15.2vh;
+    background: lightgreen;
+    border-radius: 5px;
 }
 
 .temp {

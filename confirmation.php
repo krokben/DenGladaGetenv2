@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Den glada geten</title>
@@ -29,6 +29,16 @@
             })
         });
     </script>
+
+    <?php
+        $arrDate = $_POST['arrDate'];
+        $depDate = $_POST['depDate'];
+        $room = $_POST['room'];
+        $guests = $_POST['guests'];
+        $firstname = $_POST['firstname'];
+        $lastname = $_POST['lastname'];
+        $address = $_POST['address'];
+    ?>
 
 </head>
 <body>
@@ -63,13 +73,13 @@
     <!-- Bokning -->
     <row>
         <div class="col-sm-4 bookingMain">
-            <form class="form-group" action="confirmation.php" method="post">
+            <form class="form-group" action="bokning.php" method="post">
                 <fieldset class="bookingFieldset">
-                    <h3>Boka rum hos oss!</h3>
+                    <h3>Är du säker?</h3>
                     <label>Incheckning</label><br>
-                    <input type="text" id="datepicker" name="arrDate"><br>
+                    <input type="text" id="datepicker" name="arrDate" value="<?php echo $arrDate ?>" disabled><br>
                     <label>Utcheckning</label><br>
-                    <input type="text" id="datepicker2" name="depDate"><br>
+                    <input type="text" id="datepicker2" name="depDate" value="<?php echo $depDate ?>" disabled><br>
                     <label>Rumstyp</label>
                     <select name="room">
                         <option value="Enkel">Enkel</option>
@@ -77,18 +87,18 @@
                         <option value="Sovsal">Sovsal</option>
                     </select><br>
                     <label>Antal gäster</label>
-                    <input type="number" min="1" max="8" name="guests"><br>
+                    <input type="number" min="1" max="8" name="guests" value="<?php echo $guests ?>" disabled><br>
                     <label>Förnamn</label><br>
-                    <input type="text" name="firstname"><br>
+                    <input type="text" name="firstname" value="<?php echo $firstname ?>" disabled><br>
                     <label>Efternamn</label><br>
-                    <input type="text" name="lastname"><br>
+                    <input type="text" name="lastname" value="<?php echo $lastname ?>" disabled><br>
                     <label>Mailadress</label><br>
-                    <input type="text" name="address"><br>
-                    <input class="submitButton" type="submit">
+                    <input type="text" name="address" value="<?php echo $address ?>" disabled><br>
+                    <input id="clicker" type="submit" class="submitButton" value="Bekräfta">
                 </fieldset>
             </form>
         </div>
-        <div class="col-sm-8 bookingSecondary">
+        <div class="col-sm-8 bookingSecondary2">
             <div class="col-sm-3 hidden-xs"><div></div></div>
             <div class="col-sm-3 hidden-xs"><div></div></div>
             <div class="col-sm-3 hidden-xs"><div></div></div>
