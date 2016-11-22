@@ -6,12 +6,14 @@ body {
     display: flex;
     flex-flow: row wrap;
     text-align: center;
+}
 
 .flex-container > * {
     padding: 15px;
     flex: 1 100%;
 }
 
+.content {
     text-align: left;
 }
 
@@ -54,3 +56,54 @@ footer {background: #aaa;color:white;}
     background-color: black;
     width: 300px;
     padding: 10px;
+    border-radius: 5px;
+}
+
+.book-item p {
+    display: block;
+    margin: 2px;
+}
+
+.fl-right {
+    float: right;
+}
+
+.hidden {
+    display: none;
+}
+
+.click {
+    margin-top: 15px !important;
+}
+
+
+
+
+
+
+
+
+
+@media all and (min-width: 768px) {
+
+    .nav {
+        text-align:left;
+        -webkit-flex: 1 auto;
+        flex:1 auto;
+        -webkit-order:1;
+        order:1;
+    }
+
+    .content {
+        -webkit-flex:5 0px;
+        flex:5 0px;
+        -webkit-order:2;
+        order:2;
+    }
+
+    footer {
+        -webkit-order:3;
+        order:3;
+    }
+
+}
