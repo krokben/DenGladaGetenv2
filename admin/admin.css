@@ -114,8 +114,24 @@ footer {background: #aaa;color:white;}
     flex-grow: 1;
 }
 
+.admin-p {
+    margin: 5px 0;
+    padding: 0;
+}
 
+.admin-submit {
+    display: block;
+    margin-top: 5px;
+}
 
+.admin-text {
+    width: 400px;
+    height: 100px;
+}
+
+/*.btn-delete {*/
+    /*background-color: red;*/
+/*}*/
 
 
 
