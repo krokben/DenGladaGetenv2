@@ -10,13 +10,13 @@ body {
     padding: 20px;
 }
 
-.pic {
+.mini {
     width: 25%;
     margin-bottom: 20px;
     display: inline-block;
 }
 
-.pic:hover {
+.mini:hover {
     cursor: pointer;
 }
 

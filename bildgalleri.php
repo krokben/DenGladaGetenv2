@@ -67,11 +67,11 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
                 // $query2 = "DELETE $row['source'] FROM pics"
 
                 while($row = mysqli_fetch_assoc($result)) {
-                    echo "<div class='pic-container'>
-                    <img class='pic' src='{$row['source']}'>
-                   
-                </div>";
-                }
+                    echo "
+                        <div class='col-lg-3 col-md-4 col-xs-6 thumb'>
+                            <img class='mini img-responsive' src='{$row['id']}'>
+                        </div>";
+                    }
                 ?>
             </div>
         </div>
