@@ -11,11 +11,11 @@ body {
 }
 
 .pic {
-    width: 100%;
+    width: 25%;
     margin-bottom: 20px;
 }
 
-.mini:hover {
+.pic:hover {
     cursor: pointer;
 }
 
