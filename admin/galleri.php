@@ -40,7 +40,7 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
             $uploadOk = 0;
         }
         // Check file size
-        if ($_FILES["fileToUpload"]["size"] > 500000) {
+        if ($_FILES["fileToUpload"]["size"] > 50000000) {
             echo "Sorry, your file is too large.";
             $uploadOk = 0;
         }
@@ -110,108 +110,24 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
                             echo "<div class='pic-container'>
                                     <img class='pic' src='{$row['source']}'>
                                     <div class='pic-btns'>
-                                        <form action='' method='get'>
-                                            <input type='button' name='id' class='btn-delete' value='{$row['id']}'>
-                                            <submit></submit>
+                                        <form action='' method='post'>
+                                            <input type='text' name='id' class='btn-delete' value='{$row['id']}' style='display:none'>
+                                            <input type='submit' value='Radera'>
                                         </form>
                                     </div>
                                 </div>";
 
-                                $deleteId = $_GET['id'];
-                                echo $deleteId;
-                                $sql2 = 'DELETE FROM pics WHERE id=$deleteId';
+                                $deleteId = $_POST['id'];
+                                $sql2 = "DELETE FROM pics WHERE id = $deleteId";
 
                                 if ($db->query($sql2) === TRUE) {
-                                    echo "Record deleted successfully";
+                                    header("Refresh:0");
+                                    // echo "Record deleted successfully";
                                 } else {
-                                    echo "Error deleting record: " . $db->error;
+                                    // echo "Error deleting record: " . $db->error;
                                 }
                         }
                     ?>
-                    <!-- <div class="pic-container">
-                        <img class="pic" src="../images/1.jpg">
-                        <div class="pic-btns">
-                            <button class="btn-delete">Radera</button>
-
-                        </div>
-                    </div>
-                    <div class="pic-container">
-                        <img class="pic" src="../images/2.jpg">
-                        <div class="pic-btns">
-                            <button class="btn-delete">Radera</button>
-
-                        </div>
-                    </div>
-                    <div class="pic-container">
-                        <img class="pic" src="../images/3.jpg">
-                        <div class="pic-btns">
-                            <button class="btn-delete">Radera</button>
-
-                        </div>
-                    </div>
-                    <div class="pic-container">
-                        <img class="pic" src="../images/4.jpg">
-                        <div class="pic-btns">
-                            <button class="btn-delete">Radera</button>
-
-                        </div>
-                    </div>
-                    <div class="pic-container">
-                        <img class="pic" src="../images/5.jpg">
-                        <div class="pic-btns">
-                            <button class="btn-delete">Radera</button>
-
-                        </div>
-                    </div>
-                    <div class="pic-container">
-                        <img class="pic" src="../images/6.jpg">
-                        <div class="pic-btns">
-                            <button class="btn-delete">Radera</button>
-
-                        </div>
-                    </div>
-                    <div class="pic-container">
-                        <img class="pic" src="../images/7.jpg">
-                        <div class="pic-btns">
-                            <button class="btn-delete">Radera</button>
-
-                        </div>
-                    </div>
-                    <div class="pic-container">
-                        <img class="pic" src="../images/8.jpg">
-                        <div class="pic-btns">
-                            <button class="btn-delete">Radera</button>
-
-                        </div>
-                    </div>
-                    <div class="pic-container">
-                        <img class="pic" src="../images/9.jpg">
-                        <div class="pic-btns">
-                            <button class="btn-delete">Radera</button>
-
-                        </div>
-                    </div>
-                    <div class="pic-container">
-                        <img class="pic" src="../images/10.jpg">
-                        <div class="pic-btns">
-                            <button class="btn-delete">Radera</button>
-
-                        </div>
-                    </div>
-                    <div class="pic-container">
-                        <img class="pic" src="../images/11.jpg">
-                        <div class="pic-btns">
-                            <button class="btn-delete">Radera</button>
-
-                        </div>
-                    </div>
-                    <div class="pic-container">
-                        <img class="pic" src="../images/12.jpg">
-                        <div class="pic-btns">
-                            <button class="btn-delete">Radera</button>
-
-                        </div>
-                    </div> -->
                 </div>
             </div>
 
