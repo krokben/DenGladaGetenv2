@@ -1,4 +1,8 @@
-    #findUs{
+body {
+    background: #FFFDFA;
+}
+
+#findUs{
     text-align: center;
     font-size: 6em;
     font-family: 'Lobster';
@@ -34,7 +38,7 @@
 #directions{
     font-size: 1.5em;
     font-family: 'Raleway', Helvetica, sans-serif;
-    background-color: #EDE6DE;
+    background-color: #FFFDFA;
 }
 
 .heading {
@@ -42,13 +46,13 @@
 }
 
 #mapArea{
-  background-color: #EDE6DE;
+  background-color: #FFFDFA;
 }
 
 .jumbotron{
-   background-color:#EDE6DE !important;
    border-radius: 0;
    margin: 0;
+   background-color: #FFFDFA;
 }
 
 #adress {
@@ -61,4 +65,8 @@
     border-radius: 0;
     margin-bottom:0;
     padding-bottom: 0;
+}
+
+.padding-fix {
+    padding: 0 !important;
 }

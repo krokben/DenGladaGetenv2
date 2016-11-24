@@ -8,6 +8,10 @@
       height: 100vh;
     }
 
+    .sidenav-col {
+        padding-left: 0 !important;
+    }
+
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
       .sidenav {
@@ -208,7 +212,7 @@
 
 body {
     overflow-x: hidden;
-    background-color: #FFFDFA;
+    background-color: #FFFDFA !important;
     font-family: 'Raleway', sans-serif;
 }
 
