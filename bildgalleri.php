@@ -69,12 +69,7 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
                 while($row = mysqli_fetch_assoc($result)) {
                     echo "<div class='pic-container'>
                     <img class='pic' src='{$row['source']}'>
-                    <div class='pic-btns'>
-                        <form action='' method='get'>
-                            <input type='button' name='id' class='btn-delete' value='{$row['id']}'>
-                            <submit></submit>
-                        </form>
-                    </div>
+                   
                 </div>";
                 }
                 ?>
