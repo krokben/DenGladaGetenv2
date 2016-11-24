@@ -60,7 +60,7 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
         </div>
         <div class="container container-css" id="bf">
             <div class="row">
-
+                <?php
                 $query = "SELECT * FROM pics";
 
                 $result = mysqli_query($db, $query);
@@ -76,7 +76,7 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
                         </form>
                     </div>
                 </div>";
-
+                ?>
             </div>
         </div>
     </div>
