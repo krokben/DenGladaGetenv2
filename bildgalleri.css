@@ -11,9 +11,8 @@ body {
 }
 
 .mini {
-    width: 25%;
+    width: 100%;
     margin-bottom: 20px;
-    display: inline-block;
 }
 
 .mini:hover {
