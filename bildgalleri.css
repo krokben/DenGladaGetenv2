@@ -41,8 +41,7 @@ body {
     display: flex;
     margin: auto;
     opacity: 1;
-    height: 400px;
-    width: 400px;
+    width: 50vw;
     border: 1em solid white;
 }
 
