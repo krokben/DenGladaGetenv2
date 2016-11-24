@@ -1,25 +1,25 @@
-﻿<?php
+<?php
 $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladageten' , '219508-geten');
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Bildgalleri</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="images/favicon.ico" type="image/png" sizes="16x16">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="http://www.w3schools.com/lib/w3data.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="bildgalleri.css">
-    <link rel="stylesheet" href="menu.css">
-</head>
-<body>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Bildgalleri</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="images/favicon.ico" type="image/png" sizes="16x16">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="http://www.w3schools.com/lib/w3data.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="footer.css">
+        <link rel="stylesheet" href="bildgalleri.css">
+        <link rel="stylesheet" href="menu.css">
+    </head>
+    <body>
     <!-- Header -->
     <div class="container-fluid upperHeader">
     </div>
@@ -68,14 +68,14 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
 
                 while($row = mysqli_fetch_assoc($result)) {
                 echo "<div class='pic-container'>
-                <img class='pic' src='{$row['source']}'>
-                <div class='pic-btns'>
-                    <form action='' method='get'>
-                        <input type='button' name='id' class='btn-delete' value='{$row['id']}'>
-                        <submit></submit>
-                    </form>
-                </div>
-            </div>";
+                    <img class='pic' src='{$row['source']}'>
+                    <div class='pic-btns'>
+                        <form action='' method='get'>
+                            <input type='button' name='id' class='btn-delete' value='{$row['id']}'>
+                            <submit></submit>
+                        </form>
+                    </div>
+                </div>";
 
             </div>
         </div>
@@ -91,7 +91,7 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
             <li><a href="#">Kontakt</a></li>
             <li><a><span class="glyphicon glyphicon-home"></span> Bergmästaregatan 7, 981 33 Kiruna</a></li>
             <li><a><span class="glyphicon glyphicon-earphone"></span>
-070 603 13 21</a></li>
+                    070 603 13 21</a></li>
             <li id="vector"><a href="http://www.freepik.com/free-photo/nature-design-with-bokeh-effect_879723.htm">Header image designed by Freepik</a>
             </li>
             <li><a href="login.html">Login</a></li>
@@ -100,6 +100,6 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
 
     <!-- Scripts -->
     <script src="bildgalleri.js"></script>
-</body>
-</html>
+    </body>
+    </html>
 <?php $db->close(); ?>
