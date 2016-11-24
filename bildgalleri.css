@@ -13,6 +13,7 @@ body {
 .pic {
     width: 25%;
     margin-bottom: 20px;
+    display: inline-block;
 }
 
 .pic:hover {
