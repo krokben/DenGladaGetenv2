@@ -38,7 +38,7 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
             <div class="collapse navbar-collapse gladaGetenNavbar testpadding" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li><a id="hem" href="index.html">Hem</a></li>
-                    <li class="active2"><a id="bildgalleri" href="bildgalleri.html">Bildgalleri</a></li>
+                    <li class="active2"><a id="bildgalleri" href="bildgalleri.php">Bildgalleri</a></li>
                     <li><a id="bokning" href="bokning.html">Bokning</a></li>
                     <li><a id="om" href="#">Om oss</a></li>
                     <li><a id="info1" href="info.html">Info</a></li>
