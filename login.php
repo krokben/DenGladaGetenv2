@@ -1,7 +1,7 @@
 <?php session_start();
 
-if (isset($_POST['password'])) {
-    if($_POST['password'] == "hemlis") {
+if (isset($_POST['username']) && isset($_POST['password'])) {
+    if($_POST['username'] == "glada" && $_POST['password'] == "geten") {
         $_SESSION['admin'] = TRUE;
     }
 }
@@ -60,6 +60,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == TRUE) {
         </div>
     </nav>
 
+    Där blev det fel lilla vän.
     <!-- Login form -->
     <div class="container-fluid">
         <div class="row">
