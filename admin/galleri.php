@@ -84,9 +84,9 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
 
         <nav class="nav">
             <ul>
-                <li><a href="bokning.html"><div class="nav-btn">Bokningar</div></a></li>
-                <li><a href="galleri.html"><div class="nav-btn">Bildgalleri</div></a></li>
-                <li><a href="texter.html"><div class="nav-btn">Texter</div></a></li>
+                <li><a href="bokning.php"><div class="nav-btn">Bokningar</div></a></li>
+                <li><a href="galleri.php"><div class="nav-btn">Bildgalleri</div></a></li>
+                <li><a href="texter.php"><div class="nav-btn">Texter</div></a></li>
                 <li><a href="#"><div class="nav-btn">Logga ut</div></a></li>
             </ul>
         </nav>
