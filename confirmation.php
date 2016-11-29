@@ -81,11 +81,7 @@
                     <label>Utcheckning</label><br>
                     <input type="text" id="datepicker2" name="depDate" value="<?php echo $depDate ?>" disabled><br>
                     <label>Rumstyp</label>
-                    <select name="room">
-                        <option value="Enkel">Enkel</option>
-                        <option value="Dubbel">Dubbel</option>
-                        <option value="Sovsal">Sovsal</option>
-                    </select><br>
+                    <input type="text" name="room" value="<?php echo $room ?>" disabled><br>
                     <label>Antal gäster</label>
                     <input type="number" min="1" max="8" name="guests" value="<?php echo $guests ?>" disabled><br>
                     <label>Förnamn</label><br>
