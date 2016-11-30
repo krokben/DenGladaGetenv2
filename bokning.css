@@ -4,6 +4,7 @@ body {
 
 .bookingMain {
     margin: 0;
+    height: 500px;
 }
 
 .bookingFieldset {
