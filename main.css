@@ -184,6 +184,9 @@
 
 .ui-datepicker-other-month .ui-state-default { color: #CCCCCC; }
 
+.ui-datepicker-calendar>tbody>tr>td.ui-datepicker-unselectable>span.ui-state-default{
+    color: #ccc;
+}
 
 #submit {
     width: 100%;
