@@ -332,3 +332,7 @@ body {
 @media only screen and (min-width: 700px) {
     .indexinfo h1 {font-size: 3vw !important;}
 }
+
+.width100 {
+    width: 100%;
+}
