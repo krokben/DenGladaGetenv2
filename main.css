@@ -3,9 +3,10 @@
 
     /* Set gray background color and 100% height */
     .sidenav {
-      padding-top: 20px;
-      background-color: #f1f1f1;
-      height: 100vh;
+        padding-top: 20px;
+        background-color: #f1f1f1;
+        height: 100vh;
+        /*align-items: stretch;*/
     }
 
     .sidenav-col {
@@ -19,7 +20,9 @@
         padding: 15px;
       }
       .row.content {
-        height:auto;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
       }
       .col-sm-10 {
         padding-left: 30px;
@@ -272,9 +275,6 @@ body {
 .content-area {
     padding: 20px 20px 20px 0px;
 }
-img{
-   box-shadow: 2px 2px 5px #888888;
-}
 
 .rubrik{
     margin-bottom: 1px;
@@ -293,4 +293,12 @@ img{
     margin-top: 10px;
     white-space: nowrap;
     border-radius: 0;
+    text-align: center;
+}
+
+.hero {
+    width: 50%;
+    display: inline-block;
+    float: left;
+    margin-right: 20px;
 }
