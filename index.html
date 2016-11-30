@@ -52,18 +52,18 @@
             <div class="container col-sm-2 sidenav-col">
 
                 <div class="col-sm-12 sidenav">
-                    <form id="bookingForm">
+                    <form id="bookingForm" action="bokningstart.php" method="post">
                         <fieldset>
                             <p class="bookHead">Sök lediga rum</p>
                             <p>Datum för incheckning</p>
                             <div class="input-group date" data-provide="datepicker">
-                                <input type="text" class="form-control datepicker" value="Datum" required>
+                                <input type="text" class="form-control datepicker" value="Datum" name="arrDate" required>
                                 <div class="input-group-addon">
                                     <span class="glyphicon glyphicon-th"></span>
                                 </div>
                             </div>
-                            <p class="para">Antal nätter</p>
-                            <select class="form-control nights" name="nights">
+                            <p class="para">Antal gäster</p>
+                            <select class="form-control nights" name="guests">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -95,7 +95,7 @@
                     </div>
                 </div>
 
-              
+
 
 
 
