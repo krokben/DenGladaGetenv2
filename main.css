@@ -299,6 +299,31 @@ body {
 .hero {
     width: 50%;
     display: inline-block;
+    float: right;
+    margin-left: 10px;
+}
+
+.silhouette {
+    width: 10%;
     float: left;
-    margin-right: 20px;
+    margin-right: 8px;
+}
+
+.indexinfo {
+    text-align: justify;
+}
+
+.indexinfo h1 {
+    margin-left: -20px;
+    font-size: 6vw !important;
+}
+
+.underskrift {
+    font-family: "Pinyon Script";
+    font-size: 2em;
+    float: right;
+}
+
+@media only screen and (min-width: 700px) {
+    .indexinfo h1 {font-size: 3vw !important;}
 }
