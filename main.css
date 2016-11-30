@@ -7,6 +7,11 @@
         background-color: #f1f1f1;
         height: 100vh;
         /*align-items: stretch;*/
+
+       background: -webkit-linear-gradient(#F1F1F1, #FFFDFA); /* For Safari 5.1 to 6.0 */
+       background: -o-linear-gradient(#F1F1F1, #FFFDFA); /* For Opera 11.1 to 12.0 */
+       background: -moz-linear-gradient(#F1F1F1, #FFFDFA); /* For Firefox 3.6 to 15 */
+       background: linear-gradient(#F1F1F1, #FFFDFA); /* Standard syntax (must be last) */
     }
 
     .sidenav-col {
