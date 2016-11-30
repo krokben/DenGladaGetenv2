@@ -25,7 +25,7 @@
                 var minValue = $(this).val();
                 minValue = $.datepicker.parseDate("yy-mm-dd", minValue);
                 minValue.setDate(minValue.getDate()+1);
-                $("#to").datepicker( "option", "minDate", minValue );
+                $("#datepicker2").datepicker( "option", "minDate", minValue );
             })
         });
     </script>

@@ -15,6 +15,18 @@
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="menu.css">
   <link rel="stylesheet" href="footer.css">
+
+  <script>
+      $(function(){
+          $("#datepicker").datepicker({ dateFormat: 'yy-mm-dd', minDate: new Date() });
+          $("#datepicker2").datepicker({ dateFormat: 'yy-mm-dd', minDate: new Date() }).bind("change",function(){
+              var minValue = $(this).val();
+              minValue = $.datepicker.parseDate("yy-mm-dd", minValue);
+              minValue.setDate(minValue.getDate()+1);
+              $("#datepicker2").datepicker( "option", "minDate", minValue );
+          })
+      });
+  </script>
 </head>
 <body>
     <!-- Header -->
@@ -57,10 +69,10 @@
                             <p class="bookHead">Sök lediga rum</p>
                             <p>Datum för incheckning</p>
                             <div class="input-group date" data-provide="datepicker">
-                                <input type="text" class="form-control datepicker" value="Datum" name="arrDate" required>
-                                <div class="input-group-addon">
+                                <input type="text" id="datepicker" name="arrDate">
+                                <!-- <div class="input-group-addon">
                                     <span class="glyphicon glyphicon-th"></span>
-                                </div>
+                                </div> -->
                             </div>
                             <p class="para">Antal gäster</p>
                             <select class="form-control nights" name="guests">

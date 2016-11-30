@@ -25,7 +25,7 @@
                 var minValue = $(this).val();
                 minValue = $.datepicker.parseDate("yy-mm-dd", minValue);
                 minValue.setDate(minValue.getDate()+1);
-                $("#to").datepicker( "option", "minDate", minValue );
+                $("#datepicker2").datepicker( "option", "minDate", minValue );
             })
         });
     </script>
@@ -56,7 +56,7 @@
                 <ul class="nav navbar-nav">
                     <li><a id="hem" href="index.html">Hem</a></li>
                     <li><a id="bildgalleri" href="bildgalleri.php">Bildgalleri</a></li>
-                    <li class="active2"><a id="bokning" href="bokning.html">Bokning</a></li>
+                    <li class="active2"><a id="bokning" href="bokningstart.php">Bokning</a></li>
                     <li><a id="om" href="aktiviteter.html">Aktiviteter</a></li>
                     <li><a id="info1" href="info.html">Info</a></li>
                 </ul>
@@ -118,7 +118,7 @@
         <ul class="nav navbar-nav">
             <li><a href="index.html">Hem</a></li>
             <li><a href="bildgalleri.html">Bildgalleri</a></li>
-            <li><a href="bokning.html">Bokning</a></li>
+            <li><a href="bokningstart.php">Bokning</a></li>
             <li><a href="aktiviteter.html">Aktiviteter</a></li>
             <li class="active"><a href="info.html">Info</a></li>
             <li><a href="#">Kontakt</a></li>
