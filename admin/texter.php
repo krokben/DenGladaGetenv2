@@ -2,6 +2,23 @@
 $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladageten' , '219508-geten');
 
 if (isset($_SESSION['admin']) && $_SESSION['admin'] == TRUE) {
+
+    $rubrik = $_POST['rubrik'];
+    $breadtext = $_POST['breadtext'];
+
+    // Take care of form data
+    if (isset($_POST["rubrik"]) && isset($_POST['breadtext'])) {
+        $updateId = $_POST['id'];
+        $sql = "UPDATE texts SET rubrik='$rubrik', text='$breadtext' WHERE id=$updateId";
+
+        if ($db->query($sql) === TRUE) {
+            // echo "success!";
+        } else {
+            echo "Tyvärr, där blev det något fel. Vänligen försök igen.";
+            echo "Error: " . $sql . "<br>" . $db->error;
+        }
+    }
+
     echo "<!DOCTYPE html>
     <html lang='en'>
     <head>
@@ -49,21 +66,6 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == TRUE) {
                         </form>";
                     }
 
-                    $rubrik = $_POST['rubrik'];
-                    $breadtext = $_POST['breadtext'];
-
-                    if (isset($_POST["rubrik"]) && isset($_POST['breadtext'])) {
-                        $updateId = $_POST['id'];
-                        $sql = "UPDATE texts SET rubrik='$rubrik', text='$breadtext' WHERE id=$updateId";
-
-                        if ($db->query($sql) === TRUE) {
-                            header("Refresh:0");
-                            echo "success!";
-                        } else {
-                            echo "Tyvärr, där blev det något fel. Vänligen försök igen.";
-                            echo "Error: " . $sql . "<br>" . $db->error;
-                        }
-                    }
 
     echo "<hr>
     <h2>Om oss</h2>
