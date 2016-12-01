@@ -135,15 +135,15 @@ if ($bookable) {
                                 <span class='icon-bar'></span>
                                 <span class='icon-bar'></span>
                             </button>
-                            <a class='navbar-brand' href='index.html'>Den glada geten</a>
+                            <a class='navbar-brand' href='index.php'>Den glada geten</a>
                         </div>
                         <div class='collapse navbar-collapse gladaGetenNavbar testpadding' id='myNavbar'>
                             <ul class='nav navbar-nav'>
-                                <li><a id='hem' href='index.html'>Hem</a></li>
-                                <li><a id='bildgalleri' href='bildgalleri.html'>Bildgalleri</a></li>
-                                <li class='active2'><a id='bokning' href='bokning.html'>Bokning</a></li>
-                                <li><a id='om' href='#'>Om oss</a></li>
-                                <li><a id='info1' href='info.html'>Info</a></li>
+                            <li><a id='hem' href='index.php'>Hem</a></li>
+                            <li><a id='bildgalleri' href='bildgalleri.php'>Bildgalleri</a></li>
+                            <li class='active2'><a id='bokning' href='bokning.html'>Bokning</a></li>
+                            <li><a id='om' href='aktiviteter.html'>Aktiviteter</a></li>
+                            <li><a id='info1' href='info.html'>Info</a></li>
                             </ul>
                         </div>
                     </div>
@@ -162,8 +162,8 @@ if ($bookable) {
                 <!-- Footer -->
                 <footer class='container-fluid text-center'>
                     <ul class='nav navbar-nav'>
-                        <li><a href='index.html'>Hem</a></li>
-                        <li><a href='bildgalleri.html'>Bildgalleri</a></li>
+                        <li><a href='index.php'>Hem</a></li>
+                        <li><a href='bildgalleri.php'>Bildgalleri</a></li>
                         <li><a href='bokning.html'>Bokning</a></li>
                         <li><a href='#'>Om</a></li>
                         <li class='active'><a href='info.html'>Info</a></li>
@@ -219,12 +219,12 @@ if ($bookable) {
                             <span class='icon-bar'></span>
                             <span class='icon-bar'></span>
                         </button>
-                        <a class='navbar-brand' href='index.html'>Den glada geten</a>
+                        <a class='navbar-brand' href='index.php'>Den glada geten</a>
                     </div>
                     <div class='collapse navbar-collapse gladaGetenNavbar testpadding' id='myNavbar'>
                         <ul class='nav navbar-nav'>
-                            <li><a id='hem' href='index.html'>Hem</a></li>
-                            <li><a id='bildgalleri' href='bildgalleri.html'>Bildgalleri</a></li>
+                            <li><a id='hem' href='index.php'>Hem</a></li>
+                            <li><a id='bildgalleri' href='bildgalleri.php'>Bildgalleri</a></li>
                             <li class='active2'><a id='bokning' href='bokning.html'>Bokning</a></li>
                             <li><a id='om' href='#'>Om oss</a></li>
                             <li><a id='info1' href='info.html'>Info</a></li>
@@ -246,8 +246,8 @@ if ($bookable) {
             <!-- Footer -->
             <footer class='container-fluid text-center'>
                 <ul class='nav navbar-nav'>
-                    <li><a href='index.html'>Hem</a></li>
-                    <li><a href='bildgalleri.html'>Bildgalleri</a></li>
+                    <li><a href='index.php'>Hem</a></li>
+                    <li><a href='bildgalleri.php'>Bildgalleri</a></li>
                     <li><a href='bokning.html'>Bokning</a></li>
                     <li><a href='#'>Om</a></li>
                     <li class='active'><a href='info.html'>Info</a></li>

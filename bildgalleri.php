@@ -33,11 +33,11 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Den glada geten</a>
+                <a class="navbar-brand" href="index.php">Den glada geten</a>
             </div>
             <div class="collapse navbar-collapse gladaGetenNavbar testpadding" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li><a id="hem" href="index.html">Hem</a></li>
+                    <li><a id="hem" href="index.php">Hem</a></li>
                     <li class="active2"><a id="bildgalleri" href="bildgalleri.php">Bildgalleri</a></li>
                     <li><a id="bokning" href="bokningstart.php">Bokning</a></li>
                     <li><a id="om" href="aktiviteter.html">Aktiviteter</a></li>
@@ -79,7 +79,7 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
     <!-- Footer -->
     <footer class="container-fluid text-center">
         <ul class="nav navbar-nav">
-            <li><a href="index.html">Hem</a></li>
+            <li><a href="index.php">Hem</a></li>
             <li><a href="bildgalleri.html">Bildgalleri</a></li>
             <li><a href="bokningstart.php">Bokning</a></li>
             <li><a href="aktiviteter.html">Aktiviteter</a></li>
