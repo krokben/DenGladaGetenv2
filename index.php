@@ -111,27 +111,21 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
 
                         while($row = mysqli_fetch_assoc($result)) {
                             echo $row['rubrik'];
-                            }
-                        ?></h1>
-                        <img class='silhouette' src='images/silhouette.png' /><p><?php
-                        $query = "
-                            SELECT * FROM texts
-                            WHERE id = 1;
-                        ";
-
-                        $result = mysqli_query($db, $query);
-
-                        while($row = mysqli_fetch_assoc($result)) {
+                            echo "</h1>
+                            <img class='silhouette' src='images/silhouette.png' /><p>";
                             echo $row['text'];
-                            }
-                        ?></p>
-                        <img class='hero' src='images/bookingimage.jpg'>
-                        <p>Samtliga rum på den glada geten har härliga sänglinnen i percale,
-                        som utlovar en härlig och sval natts sömn. Det finns även Wifi i alla rum
-                        (även om vi på glada geten förespråkar en nedkopplad tillvaro med nära naturupplevelser
-                        framför internet), minibar, vattenkokare, handdukar och badlakan och vår alldeles egna
-                        handgjorda tvål att använda i badkaret eller duschen! Familjerummen har även öppenspis.</p>
-                        <p class='underskrift'>Kristin Wikström</p>
+                            echo "</p>";
+                        }
+                        ?>
+                        <div>
+                            <img class='hero' src='images/bookingimage.jpg'>
+                            <p>Samtliga rum på den glada geten har härliga sänglinnen i percale,
+                            som utlovar en härlig och sval natts sömn. Det finns även Wifi i alla rum
+                            (även om vi på glada geten förespråkar en nedkopplad tillvaro med nära naturupplevelser
+                            framför internet), minibar, vattenkokare, handdukar och badlakan och vår alldeles egna
+                            handgjorda tvål att använda i badkaret eller duschen! Familjerummen har även öppenspis.</p>
+                            <p class='underskrift'>Kristin Wikström</p>
+                        </div>
                     </div>
                     <div class='col-sm-2'></div>
                 </div>
