@@ -142,8 +142,8 @@ if ($bookable) {
                             <li><a id='hem' href='index.php'>Hem</a></li>
                             <li><a id='bildgalleri' href='bildgalleri.php'>Bildgalleri</a></li>
                             <li class='active2'><a id='bokning' href='bokning.html'>Bokning</a></li>
-                            <li><a id='om' href='aktiviteter.html'>Aktiviteter</a></li>
-                            <li><a id='info1' href='info.html'>Info</a></li>
+                            <li><a id='om' href='aktiviteter.php'>Aktiviteter</a></li>
+                            <li><a id='info1' href='info.php'>Info</a></li>
                             </ul>
                         </div>
                     </div>
@@ -166,7 +166,7 @@ if ($bookable) {
                         <li><a href='bildgalleri.php'>Bildgalleri</a></li>
                         <li><a href='bokning.html'>Bokning</a></li>
                         <li><a href='#'>Om</a></li>
-                        <li class='active'><a href='info.html'>Info</a></li>
+                        <li class='active'><a href='info.php'>Info</a></li>
                         <li><a href='#'>Kontakt</a></li>
                         <li><a><span class='glyphicon glyphicon-home'></span> Bergmästaregatan 7, 981 33 Kiruna</a></li>
                         <li><a><span class='glyphicon glyphicon-earphone'></span>
@@ -227,7 +227,7 @@ if ($bookable) {
                             <li><a id='bildgalleri' href='bildgalleri.php'>Bildgalleri</a></li>
                             <li class='active2'><a id='bokning' href='bokning.html'>Bokning</a></li>
                             <li><a id='om' href='#'>Om oss</a></li>
-                            <li><a id='info1' href='info.html'>Info</a></li>
+                            <li><a id='info1' href='info.php'>Info</a></li>
                         </ul>
                     </div>
                 </div>
@@ -250,7 +250,7 @@ if ($bookable) {
                     <li><a href='bildgalleri.php'>Bildgalleri</a></li>
                     <li><a href='bokning.html'>Bokning</a></li>
                     <li><a href='#'>Om</a></li>
-                    <li class='active'><a href='info.html'>Info</a></li>
+                    <li class='active'><a href='info.php'>Info</a></li>
                     <li><a href='#'>Kontakt</a></li>
                     <li><a><span class='glyphicon glyphicon-home'></span> Bergmästaregatan 7, 981 33 Kiruna</a></li>
                     <li><a><span class='glyphicon glyphicon-earphone'></span>
