@@ -110,11 +110,9 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
                         $result = mysqli_query($db, $query);
 
                         while($row = mysqli_fetch_assoc($result)) {
-                            echo $row['rubrik'];
-                            echo "</h1>
-                            <img class='silhouette' src='images/silhouette.png' /><p>";
-                            echo $row['text'];
-                            echo "</p>";
+                            $heading = $row['rubrik'];
+                            $paragraph = $row['text'];
+                            echo "<h1 class='welcome'>$heading</h1><img class='silhouette' src='images/silhouette.png' /><p><p>$paragraph</p>";
                         }
                         ?>
                         <div>
