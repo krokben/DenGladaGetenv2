@@ -41,7 +41,7 @@ var Gallery = {
           var addToAll = false;
           var gallery = true;
           var titlePosition = 'inside';
-          $(addToAll ? 'img' : 'img.fancybox').each(function(){
+          $(addToAll ? 'bigimg' : 'bigimg.fancybox').each(function(){
               var $this = $(this);
               var title = $this.attr('title');
               var src = $this.attr('data-big') || $this.attr('src');
