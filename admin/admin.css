@@ -102,6 +102,16 @@ footer {background: #aaa;color:white;}
     display: inline-block;
     color: white;
     border-radius: 5px;
+    vertical-align: top;
+    height: 174px;
+    position: relative;
+}
+
+.delete-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 90%;
 }
 
 .pic {

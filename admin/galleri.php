@@ -100,7 +100,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == TRUE) {
                                         <div class='pic-btns'>
                                             <form action='' method='post'>
                                                 <input type='text' name='id' class='btn-delete' value='{$row['id']}' style='display:none'>
-                                                <input type='submit' value='Radera'>
+                                                <input class='delete-btn' type='submit' value='Radera'>
                                             </form>
                                         </div>
                                     </div>";
