@@ -37,25 +37,8 @@ var Gallery = {
     },
 
 
-    $(function(prevImg, nextImg){
-          var addToAll = false;
-          var gallery = true;
-          var titlePosition = 'inside';
-          $(addToAll ? 'bigimg' : 'bigimg.fancybox').each(function(){
-              var $this = $(this);
-              var title = $this.attr('title');
-              var src = $this.attr('data-big') || $this.attr('src');
-              var a = $('<a href="#" class="fancybox"></a>').attr('href', src).attr('title', title);
-              $this.bigimg(a);
-          });
-          if (gallery)
-              $('a.fancybox').attr('rel', 'fancyboxgallery');
-          $('a.fancybox').fancybox({
-              titlePosition: titlePosition
-          });
-      });
-      $.noConflict();
-    /*prevImg: function () {
+
+    prevImg: function () {
         this.imgPos = this.imgPos - 1;
         this.checkArrayLength(this.imgPos);
         this.$bigimg.attr('src', this.$mini[this.imgPos].src);
@@ -66,7 +49,7 @@ var Gallery = {
         this.checkArrayLength(this.imgPos);
         this.$bigimg.attr('src', this.$mini[this.imgPos].src);
     },
-*/
+
     checkArrayLength: function (pos) {
         var self = Gallery;
         if (pos < 0) {
