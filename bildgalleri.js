@@ -39,13 +39,13 @@ var Gallery = {
     prevImg: function () {
         this.imgPos = this.imgPos - 1;
         this.checkArrayLength(this.imgPos);
-        this.$bigimg.attr('src', this.$mini[this.imgPos].src);
+        this.$big.attr('src', this.$mini[this.imgPos].src); //ändra tillbaka här då...
     },
 
     nextImg: function () {
         this.imgPos = this.imgPos + 1;
         this.checkArrayLength(this.imgPos);
-        this.$bigimg.attr('src', this.$mini[this.imgPos].src);
+        this.$big.attr('src', this.$mini[this.imgPos].src); //Ändra tillbaka här då...
     },
 
     checkArrayLength: function (pos) {
