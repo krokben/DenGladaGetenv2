@@ -36,18 +36,37 @@ var Gallery = {
         this.$el.css('overflow', 'scroll').css('position', 'relative');
     },
 
-    prevImg: function () {
+
+    $(function($){
+          var addToAll = false;
+          var gallery = true;
+          var titlePosition = 'inside';
+          $(addToAll ? 'img' : 'img.fancybox').each(function(){
+              var $this = $(this);
+              var title = $this.attr('title');
+              var src = $this.attr('data-big') || $this.attr('src');
+              var a = $('<a href="#" class="fancybox"></a>').attr('href', src).attr('title', title);
+              $this.wrap(a);
+          });
+          if (gallery)
+              $('a.fancybox').attr('rel', 'fancyboxgallery');
+          $('a.fancybox').fancybox({
+              titlePosition: titlePosition
+          });
+      });
+      $.noConflict();
+    /*prevImg: function () {
         this.imgPos = this.imgPos - 1;
         this.checkArrayLength(this.imgPos);
-        this.$big.attr('src', this.$mini[this.imgPos].src); //ändra tillbaka här då...
+        this.$bigimg.attr('src', this.$mini[this.imgPos].src);
     },
 
     nextImg: function () {
         this.imgPos = this.imgPos + 1;
         this.checkArrayLength(this.imgPos);
-        this.$big.attr('src', this.$mini[this.imgPos].src); //Ändra tillbaka här då...
+        this.$bigimg.attr('src', this.$mini[this.imgPos].src);
     },
-
+*/
     checkArrayLength: function (pos) {
         var self = Gallery;
         if (pos < 0) {
@@ -61,5 +80,4 @@ var Gallery = {
         }
     }
 };
-
 Gallery.init();
