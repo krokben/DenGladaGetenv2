@@ -37,7 +37,7 @@ var Gallery = {
     },
 
 
-    $(function($){
+    $(function(prevImg, nextImg){
           var addToAll = false;
           var gallery = true;
           var titlePosition = 'inside';
