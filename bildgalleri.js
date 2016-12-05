@@ -33,8 +33,11 @@ var Gallery = {
     },
 
     hideImg: function () {
+      if(this.className != 'nextImg'){
         this.$big.fadeOut('fast');
         this.$el.css('overflow', 'scroll').css('position', 'relative');
+      }
+
     },
 
 /*HIT...*/
