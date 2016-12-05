@@ -15,11 +15,12 @@ var Gallery = {
     },
 
     /*Härifråntill--*/bindEvents: function () {
-        this.$mini.on('click', this.showImg);                   //Array med bilderna
-        /*this.$big.on('click', this.hideImg.bind(this));*/     //Fixa så att det går att trycka på knapparna
-        this.$bigimg.on('click', this.hideImg.bind(this));
+        this.$mini.on('click', this.showImg);
         this.$leftbtn.on('click', this.prevImg.bind(this));
-        this.$rightbtn.on('click', this.nextImg.bind(this));
+        this.$rightbtn.on('click', this.nextImg.bind(this));                  //Array med bilderna
+        /*this.$big.on('click', this.hideImg.bind(this));*/     //Fixa så att det går att trycka på knapparna
+        this.$big.on('click', this.hideImg.bind(this));
+
     },
 
     imgPos: 0,
