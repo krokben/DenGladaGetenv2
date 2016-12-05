@@ -1,5 +1,4 @@
 $('.book-item').on('click', function() {
-    $('.info').toggle();
-    $('.click').toggle();
+    $(this).children(":nth-child(5)").toggle();
+    $(this).children(":nth-child(4)").toggle();
 });
-

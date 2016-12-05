@@ -23,6 +23,8 @@
       .sidenav {
         height: auto;
         padding: 15px;
+        width: 100% !important;
+        margin: 0;
       }
       .row.content {
         overflow: hidden;
@@ -34,6 +36,16 @@
         padding-right: 30px;
         padding-bottom: 20px;
       }
+      .navbar-collapse {
+          width: 100%;
+      }
+      .container-fluid {
+          align-items: center;
+          
+          /*width: 105%;*/
+      }
+
+
     }
 
     /* CSS för slideshow: */

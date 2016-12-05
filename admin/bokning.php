@@ -26,50 +26,54 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == TRUE) {
                 <li><a href='?p=logout'><div class='nav-btn'>Logga ut</div></a></li>
             </ul>
         </nav>
-
         <div class='content'>
             <h2>Bokningar</h2>
-            <div class='booking-container'>
-                <div class='book-item'>
-                    <h3>Göran Persson</h3>
-                    <p>Incheckning:
-                        <span class='fl-right'>2016-11-22</span></p>
-                    <p>Utcheckning:
-                        <span class='fl-right'>2016-11-29</span></p>
-                    <p class='click'>Klicka för mer info...</p>
-                    <div class='info hidden'>
-                        <div class='info-div'>
-                            <p>Antal gäster:<p>
-                            <p><span class=''>2</span></p>
-                        </div>
-                        <div class='info-div'>
-                            <p>Rumsnummer:</p>
-                            <p><span class=''>1</span></p>
-                        </div>
-                        <div class='info-div'>
-                            <p>Typ av rum:</p>
-                            <p><span class=''>Familjerum</span></p>
-                        </div>
-                        <div class='info-div'>
-                            <p>Telefonnummer:</p>
-                            <p><span class=''>12 - 345 678 90</span></p>
-                        </div>
-                        <div class='info-div'>
-                            <p>Adress:</p>
-                            <p><span class=''>Gatvägen 10, 12345 Byxelkrok</span></p>
-                        </div>
-                        <div class='info-div'>
-                            <p>Inbokade aktiviteter:</p>
-                            <p><span class=''>Getklappning</span></p>
-                        </div>
-                        <div>
-                            <p>Övrigt:</p>
-                            <p><span class=''>Allergisk mot sill</span></p>
+            <div class='booking-container'>";
+
+        $query = "SELECT * FROM bookings
+                    WHERE depDate >= NOW()
+                    ORDER BY arrDate ASC
+        ";
+
+        $result = mysqli_query($db, $query);
+        // $query2 = "DELETE $row['source'] FROM pics"
+
+            while($row = mysqli_fetch_assoc($result)) {
+            echo "
+                    <div class='book-item'>
+                        <h3>{$row['firstname']} {$row['lastname']}</h3>
+                        <p>Incheckning:
+                            <span class='fl-right'>{$row['arrDate']}</span></p>
+                        <p>Utcheckning:
+                            <span class='fl-right'>{$row['depDate']}</span></p>
+                        <p class='click'>Klicka för mer info...</p>
+                        <div class='info hidden'>
+                            <div class='info-div'>
+                                <p>Antal gäster:<p>
+                                <p><span class=''>{$row['guests']}</span></p>
+                            </div>
+                            <div class='info-div'>
+                                <p>Rumsnummer:</p>
+                                <p><span class=''>{$row['typeID']}</span></p>
+                            </div>
+                            <div class='info-div'>
+                                <p>Typ av rum:</p>
+                                <p><span class=''>{$row['room']}</span></p>
+                            </div>
+                            <div class='info-div'>
+                                <p>E-mail:</p>
+                                <p><span class=''>{$row['address']}</span></p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                ";
+            }
+        echo "
             </div>
         </div>
+
+
+
     </div>
 
 
