@@ -19,7 +19,6 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
         <link rel="stylesheet" href="footer.css">
         <link rel="stylesheet" href="bildgalleri.css">
         <link rel="stylesheet" href="menu.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.min.js"></script>
     </head>
     <body>
     <!-- Header -->

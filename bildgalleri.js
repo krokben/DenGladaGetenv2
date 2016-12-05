@@ -33,7 +33,7 @@ var Gallery = {
     },
 
     hideImg: function () {
-      if(!this.hasClass('nextImg'){
+      if(!this.hasClass('switchImg')){
         this.$big.fadeOut('fast');
         this.$el.css('overflow', 'scroll').css('position', 'relative');
       }
