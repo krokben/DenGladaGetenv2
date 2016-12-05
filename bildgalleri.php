@@ -12,9 +12,10 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="http://www.w3schools.com/lib/w3data.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Raleway|Raleway:700|Pinyon+Script' rel='stylesheet'>
         <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="footer.css">
         <link rel="stylesheet" href="bildgalleri.css">
         <link rel="stylesheet" href="menu.css">
@@ -25,23 +26,23 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
     </div>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid testpadding">
-            <div class="navbar-header navbar-header-small">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+    <nav class='navbar navbar-inverse'>
+        <div class='container-fluid'>
+            <div class='navbar-header navbar-header-small'>
+                <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='#myNavbar'>
+                    <span class='icon-bar'></span>
+                    <span class='icon-bar'></span>
+                    <span class='icon-bar'></span>
                 </button>
-                <a class="navbar-brand" href="index.php">Den glada geten</a>
+                <a class='navbar-brand' href='index.php'>Den glada geten</a>
             </div>
-            <div class="collapse navbar-collapse gladaGetenNavbar testpadding" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li><a id="hem" href="index.php">Hem</a></li>
-                    <li class="active2"><a id="bildgalleri" href="bildgalleri.php">Bildgalleri</a></li>
-                    <li><a id="bokning" href="bokningstart.php">Bokning</a></li>
-                    <li><a id="om" href="aktiviteter.html">Aktiviteter</a></li>
-                    <li><a id="info1" href="info.html">Info</a></li>
+            <div class='collapse navbar-collapse gladaGetenNavbar testpadding' id='myNavbar'>
+                <ul class='nav navbar-nav'>
+                    <li><a id='hem' href='index.php'>Hem</a></li>
+                    <li class='active2'><a id='bildgalleri' href='bildgalleri.php'>Bildgalleri</a></li>
+                    <li><a id='bokning' href='bokning.html'>Bokning</a></li>
+                    <li><a id='om' href='aktiviteter.html'>Aktiviteter</a></li>
+                    <li><a id='info1' href='info.html'>Info</a></li>
                 </ul>
             </div>
         </div>

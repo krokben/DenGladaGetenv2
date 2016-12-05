@@ -43,7 +43,7 @@
 
     <!-- Navbar -->
     <nav class="navbar navbar-inverse">
-        <div class="container-fluid testpadding">
+        <div class="container-fluid">
             <div class="navbar-header navbar-header-small">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <span class="icon-bar"></span>
@@ -56,7 +56,7 @@
                 <ul class="nav navbar-nav">
                     <li><a id="hem" href="index.php">Hem</a></li>
                     <li><a id="bildgalleri" href="bildgalleri.php">Bildgalleri</a></li>
-                    <li class="active2"><a id="bokning" href="bokningstart.php">Bokning</a></li>
+                    <li class="active2"><a id="bokning" href="bokning.html">Bokning</a></li>
                     <li><a id="om" href="aktiviteter.html">Aktiviteter</a></li>
                     <li><a id="info1" href="info.html">Info</a></li>
                 </ul>
