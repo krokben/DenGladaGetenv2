@@ -67,9 +67,9 @@
                 <fieldset class="bookingFieldset">
                     <h3>Boka rum hos oss!</h3>
                     <label>Incheckning</label><br>
-                    <input type="text" id="datepicker" name="arrDate"><br>
+                    <input type="text" id="datepicker" name="arrDate" placeholder="ÅÅÅÅ-MM-DD" pattern="\d{4}-\d{1,2}-\d{1,2}" title="ÅÅÅÅ-MM-DD" required><br>
                     <label>Utcheckning</label><br>
-                    <input type="text" id="datepicker2" name="depDate"><br>
+                    <input type="text" id="datepicker2" name="depDate" placeholder="ÅÅÅÅ-MM-DD" pattern="\d{4}-\d{1,2}-\d{1,2}" title="ÅÅÅÅ-MM-DD" required><br>
                     <label>Rumstyp</label>
                     <select name="room">
                         <option value="Enkel">Enkel</option>
@@ -77,13 +77,13 @@
                         <option value="Familje">Familje</option>
                     </select><br>
                     <label>Antal gäster</label>
-                    <input type="number" min="1" max="8" name="guests"><br>
+                    <input type="number" min="1" max="8" name="guests" required><br>
                     <label>Förnamn</label><br>
-                    <input type="text" name="firstname"><br>
+                    <input type="text" name="firstname" pattern="[A-Za-z\s]{1,20}" title="Endast bokstäver, max 20" required><br>
                     <label>Efternamn</label><br>
-                    <input type="text" name="lastname"><br>
+                    <input type="text" name="lastname" pattern="[A-Za-z\s]{1,40}" title="Endast bokstäver, max 40" required><br>
                     <label>Mailadress</label><br>
-                    <input type="text" name="address"><br>
+                    <input type="text" name="address" required><br>
                     <input class="submitButton" type="submit">
                 </fieldset>
             </form>

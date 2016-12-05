@@ -72,8 +72,8 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
                         <fieldset>
                             <p class='bookHead'>Sök lediga rum</p>
                             <p>Datum för incheckning</p>
-                            <div class='input-group date' data-provide='datepicker' placeholder='ÅÅÅÅ-MM-DD'>
-                                <input type='text' id='datepicker' class='form-control width100' name='arrDate'>
+                            <div class='input-group date' data-provide='datepicker'>
+                                <input type='text' id='datepicker' class='form-control width100' name='arrDate' placeholder='ÅÅÅÅ-MM-DD' pattern='\d{4}-\d{1,2}-\d{1,2}' required>
                                 <!-- <div class='input-group-addon'>
                                     <span class='glyphicon glyphicon-th'></span>
                                 </div> -->
@@ -88,8 +88,6 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
                                 <option>6</option>
                                 <option>7</option>
                                 <option>8</option>
-                                <option>9</option>
-                                <option>10</option>
                             </select>
                             <input class='btn-success' id='submit' name='submit' type='submit' value='Sök' />
                         </fieldset>
