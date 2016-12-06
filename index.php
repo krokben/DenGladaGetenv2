@@ -54,7 +54,7 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
                     <li><a id='bildgalleri' href='bildgalleri.php'>Bildgalleri</a></li>
                     <li><a id='bokning' href='bokning.html'>Bokning</a></li>
                     <li><a id='om' href='aktiviteter.php'>Aktiviteter</a></li>
-                    <li><a id='info1' href='info.php'>Info</a></li>
+                    <li><a id='info1' href='info.html'>Info</a></li>
                 </ul>
             </div>
         </div>
@@ -138,7 +138,7 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
             <li><a href='bildgalleri.php'>Bildgalleri</a></li>
             <li><a href='bokning.html'>Bokning</a></li>
             <li><a href='aktiviteter.php'>Aktiviteter</a></li>
-            <li class='active'><a href='info.php'>Info</a></li>
+            <li class='active'><a href='info.html'>Info</a></li>
             <li><a href='#'>Kontakt</a></li>
             <li><a><span class='glyphicon glyphicon-home'></span> Bergmästaregatan 7, 981 33 Kiruna</a></li>
             <li><a><span class='glyphicon glyphicon-earphone'></span>
