@@ -50,14 +50,15 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
 
     <!-- Bildgalleri -->
     <div id="gallery" class="container-fluid">
-        <div class="big">
+
 
             <div class="img-container">
                 <div class="button switchImg leftbtn" ><div class="content">☜</div></div>
                 <img class="bigimg">
                 <div class="button switchImg rightbtn"><div class="content">☞</div></div>
             </div>
-
+            
+  <div class="big">
         </div>
         <div class="container container-css" id="bf">
             <div class="row">
