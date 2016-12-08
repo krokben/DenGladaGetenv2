@@ -103,7 +103,7 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
                 <div class='row'>
                     <div class='col-sm-2'></div>
                     <article class='col-sm-8 indexinfo'>
-                        <h1 class='welcome'><?php
+                        <?php
                         $query = "
                             SELECT * FROM texts
                             WHERE id = 1;
