@@ -52,8 +52,8 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
     </nav>
 
     <!--Här ligger aktiviteter-->
-    <div class='row'>
-        <div class='col-sm-4 text-center'>
+    <article class='row'>
+        <section class='col-sm-4 text-center'>
             <br>
             <div class="act-image act-image1"></div>
             <?php
@@ -70,8 +70,8 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
                 echo "<h4 class='rubrik'>$heading</h4><div class='act-paragraph'><p>$paragraph<br></p></div>";
                 }
             ?>
-        </div>
-        <div class='col-sm-4 text-center'>
+        </section>
+        <section class='col-sm-4 text-center'>
             <br>
             <div class="act-image act-image2"></div>
             <?php
@@ -88,9 +88,8 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
                 echo "<h4 class='rubrik'>$heading</h4><div class='act-paragraph'><p>$paragraph<br></p></div>";
                 }
             ?>
-        </div>
-
-        <div class='col-sm-4 text-center'>
+        </section>
+        <section class='col-sm-4 text-center'>
             <br>
             <div class="act-image act-image3"></div>
             <?php
@@ -107,8 +106,8 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
                 echo "<h4 class='rubrik'>$heading</h4><div class='act-paragraph'><p>$paragraph<br></p></div>";
                 }
             ?>
-        </div>
-        <div class='col-sm-4 text-center'>
+        </section>
+        <section class='col-sm-4 text-center'>
             <br>
             <div class="act-image act-image4"></div>
             <?php
@@ -125,8 +124,8 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
                 echo "<h4 class='rubrik'>$heading</h4><div class='act-paragraph'><p>$paragraph<br></p></div>";
                 }
             ?>
-        </div>
-        <div class='col-sm-4 text-center'>
+        </section>
+        <section class='col-sm-4 text-center'>
             <br>
             <div class="act-image act-image5"></div>
             <?php
@@ -143,8 +142,8 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
                 echo "<h4 class='rubrik'>$heading</h4><div class='act-paragraph'><p>$paragraph<br></p></div>";
                 }
             ?>
-        </div>
-        <div class='col-sm-4 text-center'>
+        </section>
+        <section class='col-sm-4 text-center'>
             <br>
             <div class="act-image act-image6"></div>
             <?php
@@ -161,8 +160,8 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
                 echo "<h4 class='rubrik'>$heading</h4><div class='act-paragraph'><p>$paragraph<br></p></div>";
                 }
             ?>
-        </div>
-    </div>
+        </section>
+    </article>
 
 
 

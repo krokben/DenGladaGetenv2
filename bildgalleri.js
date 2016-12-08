@@ -12,13 +12,14 @@ var Gallery = {
         this.$bigimg = this.$el.find('.bigimg');
         this.$leftbtn = this.$el.find('.leftbtn');
         this.$rightbtn = this.$el.find('.rightbtn');
-        this.$imgcontainer = this.$el.find('img-container');
+        this.$imgcontainer = this.$el.find('.img-container');
     },
 
     /*Härifråntill--*/bindEvents: function () {
         this.$mini.on('click', this.showImg);                   //Array med bilderna
-        /*this.$big.on('click', this.hideImg.bind(this));*/     //Fixa så att det går att trycka på knapparna
-        this.$big.on('click', this.not($(this).find('div')).hideImg.bind(this));
+        /*this.$big.on('click', this.hideImg.bind(this));*/
+        //Fixa så att det går att trycka på knapparna
+        this.$imgcontainer.on('click', this.hideImg.bind(this));
         this.$leftbtn.on('click', this.prevImg.bind(this));
         this.$rightbtn.on('click', this.nextImg.bind(this));
     },
@@ -30,6 +31,7 @@ var Gallery = {
         self.imgPos = self.$mini.index(this);
         self.$big.fadeIn('fast').css('display', 'flex');
         self.$bigimg.attr('src', this.src);
+
     },
 
     hideImg: function () {
