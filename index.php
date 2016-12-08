@@ -75,10 +75,10 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
                             <p class='bookHead'>Sök lediga rum</p>
                             <p>Datum för incheckning</p>
                             <div class='input-group date' data-provide='datepicker'>
-                                <input type='text' id='datepicker' class='form-control width100' name='arrDate' placeholder='ÅÅÅÅ-MM-DD' pattern='\d{4}-\d{1,2}-\d{1,2}' required>
-                                <!-- <div class='input-group-addon'>
-                                    <span class='glyphicon glyphicon-th'></span>
-                                </div> -->
+                                <input type='text' id='datepicker' class='form-control width100 input-fix' name='arrDate' placeholder='ÅÅÅÅ-MM-DD' pattern='\d{4}-\d{1,2}-\d{1,2}' required>
+                                <div class='input-group-addon'>
+                                    <span class='glyphicon glyphicon-calendar'></span>
+                                </div>
                             </div>
                             <p class='para'>Antal gäster</p>
                             <select class='form-control nights' name='guests'>
