@@ -101,7 +101,7 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
 
                 <div class='row'>
                     <div class='col-sm-2'></div>
-                    <div class='col-sm-8 indexinfo'>
+                    <article class='col-sm-8 indexinfo'>
                         <h1 class='welcome'><?php
                         $query = "
                             SELECT * FROM texts
@@ -125,7 +125,7 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
                             handgjorda tvål att använda i badkaret eller duschen! Familjerummen har även öppenspis.</p>
                             <p class='underskrift'>Kristin Wikström</p>
                         </div>
-                    </div>
+                    </article>
                     <div class='col-sm-2'></div>
                 </div>
             </div>
