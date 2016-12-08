@@ -16,6 +16,7 @@
 
     .sidenav-col {
         padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 
     /* On small screens, set height to 'auto' for sidenav and grid */
@@ -41,7 +42,7 @@
       }
       .container-fluid {
           align-items: center;
-          
+
           /*width: 105%;*/
       }
 
@@ -290,7 +291,7 @@ body {
 }
 
 .content-area {
-    padding: 20px 20px 20px 0px;
+    padding: 0;
 }
 
 .rubrik{
@@ -343,8 +344,23 @@ body {
 
 @media only screen and (min-width: 700px) {
     .indexinfo h1 {font-size: 3vw !important;}
+
+    .content-area {
+        padding: 20px 20px 20px 20px;
+    }
+
 }
 
 .width100 {
     width: 100%;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.noPad {
+    padding-left: 0;
+    padding-right: 0;
 }

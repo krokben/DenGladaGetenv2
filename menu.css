@@ -44,8 +44,7 @@
     }
 
     .navbar-collapse {
-        padding-right: 40px;
+        /*padding-right: 40px;*/
         overflow-y: hidden;
     }
 }
-

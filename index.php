@@ -38,8 +38,8 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
     </div>
 
     <!-- Navbar -->
-    <nav class='navbar navbar-inverse'>
-        <div class='container-fluid'>
+    <nav class='navbar navbar-inverse navbarFix'>
+        <div class='container-fluid fixSide'>
             <div class='navbar-header navbar-header-small'>
                 <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='#myNavbar'>
                     <span class='icon-bar'></span>
@@ -62,10 +62,10 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
 
 
     <!--Allt under slider-->
-    <div class='container-fluid'>
+    <div class='container-fluid noPad'>
         <div class='row content'>
             <!--Bokningsformulär/sidenav-->
-            <div class='container col-sm-2 sidenav-col'>
+            <div class='container-fluid col-sm-2 sidenav-col'>
 
                 <div class='col-sm-12 sidenav'>
                     <form id='bookingForm' action='bokningstart.php' method='post'>
