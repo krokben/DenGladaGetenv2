@@ -238,7 +238,7 @@ if ($bookable) {
             <row>
                 <div class='col-sm-12 confirmationDiv'>
                     <h1>Tyvärr, där var det redan bokat.</h1>
-                    <h2>Ett mail har inte skickats till $address.</h2>
+                    <h2>Ett mail har <u>inte</u> skickats till $address.</h2>
                 </div>
             </row>
 
