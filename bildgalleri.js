@@ -12,6 +12,7 @@ var Gallery = {
         this.$bigimg = this.$el.find('.bigimg');
         this.$leftbtn = this.$el.find('.leftbtn');
         this.$rightbtn = this.$el.find('.rightbtn');
+        this.$imgcontainer = this.$el.find('img-container');
     },
 
     /*Härifråntill--*/bindEvents: function () {
