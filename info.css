@@ -2,7 +2,7 @@ body {
     background: #FFFDFA;
 }
 
-#findUs{
+.findUs{
     text-align: center;
     font-size: 6em;
     font-family: 'Lobster';
@@ -69,4 +69,12 @@ body {
 
 .padding-fix {
     padding: 0 !important;
+}
+
+.padArticle {
+    padding: 0 30px 10px 30px;
+}
+
+.padTop {
+    padding-top: 25px;
 }
