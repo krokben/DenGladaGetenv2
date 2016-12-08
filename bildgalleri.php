@@ -22,8 +22,8 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
     </head>
     <body>
     <!-- Header -->
-    <div class="container-fluid upperHeader">
-    </div>
+    <header class="container-fluid upperHeader">
+    </header>
 
     <!-- Navbar -->
     <nav class='navbar navbar-inverse'>

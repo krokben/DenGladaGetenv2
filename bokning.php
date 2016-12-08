@@ -123,8 +123,8 @@ if ($bookable) {
             </head>
             <body>
                 <!-- Header -->
-                <div class='container-fluid upperHeader'>
-                </div>
+                <header class='container-fluid upperHeader'>
+                </header>
 
                 <!-- Navbar -->
                 <nav class='navbar navbar-inverse'>
