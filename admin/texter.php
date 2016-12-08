@@ -47,8 +47,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == TRUE) {
 
             <div class='content'>
                 <h2>Texter</h2>
-                <h2>Hem</h2>
-                <hr>";
+                ";
 
                     $query = "SELECT * FROM texts";
 
@@ -56,29 +55,21 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == TRUE) {
                     // $query2 = "DELETE $row['source'] FROM pics"
 
                     while($row = mysqli_fetch_assoc($result)) {
-                        echo "<form action='' method='post'>
+                        echo "<div class='textwrap'>
+                            <form action='' method='post'>
                             <p class='admin-p'><label for='hemrubrik'>Rubrik</label></p>
                             <input type='text' id='hemrubrik' name='rubrik' value='{$row['rubrik']}'>
                             <p class='admin-p'><label for='hemtext'>Text</label></p>
                             <textarea class='admin-text' id='hemtext' name='breadtext'>{$row['text']}</textarea>
                             <input type='text' name='id' value='{$row['id']}' style='display:none'>
                             <input type='submit' value='Spara'>
-                        </form>";
+                        </form>
+                        </div>";
                     }
 
 
-    echo "<hr>
-    <h2>Om oss</h2>
-    <form>
-        <p class='admin-p'><label for='hemrubrik'>Rubrik</label></p>
-        <input type='text' id='hemrubrik2'>
-        <p class='admin-p'><label for='hemtext'>Text</label></p>
-        <textarea class='admin-text' id='hemtext2'></textarea>
-        <input type='submit' class='admin-submit' value='Spara'>
-    </form>
-
+    echo "
     </div>
-
     </div>
 
 

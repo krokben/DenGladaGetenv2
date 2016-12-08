@@ -105,6 +105,7 @@ footer {background: #aaa;color:white;}
     vertical-align: top;
     height: 174px;
     position: relative;
+    background-color: #333333;
 }
 
 .delete-btn {
@@ -112,6 +113,23 @@ footer {background: #aaa;color:white;}
     bottom: 10px;
     right: 10px;
     width: 90%;
+    border: 1px solid white;
+    color: white;
+    background-color: #333333;
+    border-radius: 3px;
+}
+
+.delete-btn:hover {
+    background-color: white;
+    color: #333333;
+}
+
+.textwrap {
+    background-color: #333333;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .pic {
