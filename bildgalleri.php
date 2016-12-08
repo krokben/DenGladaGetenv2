@@ -3,7 +3,7 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
 ?>
     <!DOCTYPE html>
     <html>
-    <head> 
+    <head>
         <title>Bildgalleri</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,7 +52,7 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
     <div id="gallery" class="container-fluid">
         <div class="big">
 
-            <div class="img-container">
+            <div class="img-container" id="knapp">
                 <div class="button switchImg leftbtn" ><div class="content">☜</div></div>
                 <img class="bigimg">
                 <div class="button switchImg rightbtn"><div class="content">☞</div></div>
