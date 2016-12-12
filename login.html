@@ -50,9 +50,9 @@
                 <div class="loginForm">
                     <form action="login.php" method="post">
                         <label>Användarnamn</label><br>
-                        <input type="text" name="username"><br>
+                        <input type="text" name="username" pattern="[A-Za-z\s]{1,20}" title="Endast bokstäver, max 20" required><br>
                         <label>Lösenord</label><br>
-                        <input type="password" name="password"><br>
+                        <input type="password" name="password" pattern="[A-Za-z\s]{1,20}" title="Endast bokstäver, max 20" required><br>
                         <input type="submit" class="loginSubmit" value="Login">
                     </form>
                 </div>
