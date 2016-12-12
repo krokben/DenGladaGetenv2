@@ -27,10 +27,13 @@ var Gallery = {
     imgPos: 0,
 
     showImg: function () {
+        var mq = window.matchMedia("(min-width: 767px)");
         var self = Gallery;
-        self.imgPos = self.$mini.index(this);
-        self.$big.fadeIn('fast').css('display', 'flex');
-        self.$bigimg.attr('src', this.src);
+        if (mq.matches) {
+            self.imgPos = self.$mini.index(this);
+            self.$big.fadeIn('fast').css('display', 'flex');
+            self.$bigimg.attr('src', this.src);
+        };
 
     },
 
