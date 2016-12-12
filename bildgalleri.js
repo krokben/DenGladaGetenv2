@@ -64,31 +64,6 @@ var Gallery = {
         else {
             return self.imgPos;
         }
-    },
-
-
-<!--Här-->
-
-    checkKey: function (e) {
-
-        e = e || window.event;
-
-        else if (e.keyCode == '37') {
-
-              this.imgPos = this.imgPos - 1;
-              this.checkArrayLength(this.imgPos);
-              this.$bigimg.attr('src', this.$mini[this.imgPos].src);
-
-           // left arrow
-        }
-        else if (e.keyCode == '39') {
-           // right arrow
-        }
-
     }
-
-
 };
 Gallery.init();
-
-document.onkeydown = Gallery.checkKey();
