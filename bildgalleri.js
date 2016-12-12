@@ -22,6 +22,20 @@ var Gallery = {
         this.$imgcontainer.on('click', this.hideImg.bind(this));
         this.$leftbtn.on('click', this.prevImg.bind(this));
         this.$rightbtn.on('click', this.nextImg.bind(this));
+
+        $(document).on('keydown', function(e) {
+          var self = Gallery;
+          // left = 37
+          // right = 39
+          var keyPressed = e.keyCode;
+
+          if(keyPressed === 37) {
+            self.prevImg();
+          } else if (keyPressed === 39) {
+            self.nextImg();
+          }
+        });
+
     },
 
     imgPos: 0,
