@@ -29,6 +29,7 @@ $result = mysqli_query($db, $query);
 $row_cnt = mysqli_num_rows($result);
 $bookable = true;
 
+// If room is of certain type, assign certain typeID
 switch ($room) {
     case 'Enkel':
         $typeID = "1";
@@ -186,6 +187,14 @@ if ($bookable) {
         echo "Error: " . $sql . "<br>" . $db->error;
     }
 } else {
+    $query = "
+        SELECT * FROM bookings
+        WHERE room = 'Dubbel'
+        $querySpan BETWEEN arrDate AND depDate
+    ";
+    
+    $result = mysqli_query($db, $query);
+
     echo "<!DOCTYPE html>
     <html>
     <head>
@@ -238,7 +247,13 @@ if ($bookable) {
             <row>
                 <div class='col-sm-12 confirmationDiv'>
                     <h1>Tyvärr, där var det redan bokat.</h1>
-                    <h2>Ett mail har <u>inte</u> skickats till $address.</h2>
+                    <h2>Ett mail har <u>inte</u> skickats till $address.</h2>";
+
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo $row['room'];
+                    }
+
+                echo "
                 </div>
             </row>
 
