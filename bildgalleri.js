@@ -68,7 +68,6 @@ var Gallery = {
 
 
 <!--Här-->
-    document.onkeydown = checkKey;
 
     checkKey: function (e) {
 
@@ -91,3 +90,5 @@ var Gallery = {
 
 };
 Gallery.init();
+
+document.onkeydown = Gallery.checkKey();
