@@ -95,18 +95,24 @@ $result = mysqli_query($db, $query);
     <!-- Bokning -->
     <row>
         <div class="col-sm-4 bookingMain">
-            <form class="form-group" action="confirmation.php" method="post">
+            <form class="form-group" action="bokning.php" method="post">
                 <fieldset class="bookingFieldset">
-                    <h3>Boka rum hos oss!</h3>
-                    <label for="datepicker">Incheckning</label><br>
-                    <input type="text" id="datepicker" name="arrDate" value="<?php echo $arrDate ?>" placeholder="ÅÅÅÅ-MM-DD" pattern="\d{4}-\d{1,2}-\d{1,2}" title="ÅÅÅÅ-MM-DD" required><br>
-                    <label for="datepicker2">Utcheckning</label><br>
-                    <input type="text" id="datepicker2" name="depDate" placeholder="ÅÅÅÅ-MM-DD" pattern="\d{4}-\d{1,2}-\d{1,2}" title="ÅÅÅÅ-MM-DD" required><br>
-                    <label for="guests">Antal gäster</label>
-                    <input id="guests" type="number" min="1" max="8" name="guests" value="<?php echo $guests ?>" required><br>
-                    <label for="rooms">Antal rum</label>
-                    <input id="rooms" type="number" min="1" max="8" name="rooms" value="<?php echo $guests ?>" required><br>
-                    <input class="submitButton" type="submit" value="Sök lediga rum">
+                    <h3>Är du säker?</h3>
+                    <label>Incheckning</label><br>
+                    <input type="text" id="datepicker" name="arrDate" value="<?php echo $arrDate ?>" disabled><br>
+                    <label>Utcheckning</label><br>
+                    <input type="text" id="datepicker2" name="depDate" value="<?php echo $depDate ?>" disabled><br>
+                    <label>Rumstyp</label>
+                    <input id="roomType" type="text" name="room" value="<?php echo $room ?>" disabled><br>
+                    <label>Antal gäster</label>
+                    <input type="number" min="1" max="8" name="guests" value="<?php echo $guests ?>" disabled><br>
+                    <label>Förnamn</label><br>
+                    <input type="text" name="firstname" value="<?php echo $firstname ?>" pattern="\d{4}-\d{1,2}-\d{1,2}" title="ÅÅÅÅ-MM-DD" required><br>
+                    <label>Efternamn</label><br>
+                    <input type="text" name="lastname" value="<?php echo $lastname ?>" pattern="\d{4}-\d{1,2}-\d{1,2}" title="ÅÅÅÅ-MM-DD" required><br>
+                    <label>Mailadress</label><br>
+                    <input type="text" name="address" value="<?php echo $address ?>" pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" required><br>
+                    <input id="clicker" type="submit" class="submitButton" value="Bekräfta">
                 </fieldset>
             </form>
         </div>
@@ -116,17 +122,15 @@ $result = mysqli_query($db, $query);
             <?php
             while ($row = mysqli_fetch_assoc($result)) {
             echo "
-                <div class='avalible-rooms col-sm-4'>
+                <div class='available-rooms col-sm-4'>
                     <h3>{$row['type']}</h3>
 
                     <p>Incheckning:
                         <span class='fl-right'>{$row['arrDate']}</span></p>
                     <p>Utcheckning:
                         <span class='fl-right'>{$row['depDate']}</span></p>
-                    <form action='confirmation.php' method='post'>
                         <input type='text' value='{$row['type']}' style='display: none;'>
-                        <input type='submit' value='Boka'>
-                    </form>
+                        <button></button>
                 </div>";
 
             }
@@ -154,5 +158,6 @@ $result = mysqli_query($db, $query);
     </footer>
 
       <script src="bokning.js"></script>
+      <script src="roomsearch.js"></script>
     </body>
 </html>
