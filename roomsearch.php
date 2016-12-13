@@ -1,4 +1,37 @@
-﻿<!DOCTYPE html>
+<?php
+$db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladageten' , '219508-geten');
+
+$arrDate = $_POST['arrDate'];
+$depDate = $_POST['depDate'];
+$rooms = $_POST['rooms'];
+$guests = $_POST['guests'];
+
+$begin = new DateTime($arrDate);
+$end = new DateTime($depDate);
+
+$daterange = new DatePeriod($begin, new DateInterval('P1D'), $end);
+
+foreach($daterange as $date){
+    $dateSpan = "AND" . " '" . $date->format("Y-m-d") . "' ";
+    $querySpan .= $dateSpan;
+}
+
+$query = "
+        SELECT DISTINCT type FROM rooms AS r
+        WHERE r.id NOT IN (
+        SELECT typeID FROM bookings AS b
+        WHERE (
+        (arrDate BETWEEN '$arrDate' AND '$depDate')
+        OR (depDate BETWEEN '$arrDate' AND '$depDate')
+        OR (arrDate = '$arrDate')
+        OR (depDate = '$depDate')
+        OR ('$arrDate' >= arrDate AND '$depDate' <= depDate)
+        ))
+";
+
+$result = mysqli_query($db, $query);
+?>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Den glada geten</title>
@@ -29,12 +62,6 @@
             })
         });
     </script>
-
-    <?php
-        $arrDate = $_POST['arrDate'];
-        $guests = $_POST['guests'];
-    ?>
-
 </head>
 <body>
     <!-- Header -->
@@ -68,7 +95,7 @@
     <!-- Bokning -->
     <row>
         <div class="col-sm-4 bookingMain">
-            <form class="form-group" action="roomsearch.php" method="post">
+            <form class="form-group" action="confirmation.php" method="post">
                 <fieldset class="bookingFieldset">
                     <h3>Boka rum hos oss!</h3>
                     <label for="datepicker">Incheckning</label><br>
@@ -84,22 +111,27 @@
             </form>
         </div>
         <div class="col-sm-8 bookingSecondary">
-            <div class="col-sm-3 hidden-xs"><div></div></div>
-            <div class="col-sm-3 hidden-xs"><div></div></div>
-            <div class="col-sm-3 hidden-xs"><div></div></div>
-            <div class="col-sm-3 hidden-xs"><div></div></div>
-            <div class="col-sm-3 hidden-xs"><div></div></div>
-            <div class="col-sm-3 hidden-xs"><div></div></div>
-            <div class="col-sm-3 hidden-xs"><div></div></div>
-            <div class="col-sm-3 hidden-xs"><div></div></div>
-            <div class="col-sm-3 hidden-xs"><div></div></div>
-            <div class="col-sm-3 hidden-xs"><div></div></div>
-            <div class="col-sm-3 hidden-xs"><div></div></div>
-            <div class="col-sm-3 hidden-xs"><div></div></div>
-            <div class="col-sm-3 hidden-xs"><div></div></div>
-            <div class="col-sm-3 hidden-xs"><div></div></div>
-            <div class="col-sm-3 hidden-xs"><div></div></div>
-            <div class="col-sm-3 hidden-xs"><div></div></div>
+
+
+            <?php
+            while ($row = mysqli_fetch_assoc($result)) {
+            echo "
+                <div class='avalible-rooms col-sm-4'>
+                    <h3>{$row['type']}</h3>
+
+                    <p>Incheckning:
+                        <span class='fl-right'>{$row['arrDate']}</span></p>
+                    <p>Utcheckning:
+                        <span class='fl-right'>{$row['depDate']}</span></p>
+                    <form action='confirmation.php' method='post'>
+                        <input type='text' value='{$row['type']}' style='display: none;'>
+                        <input type='submit' value='Boka'>
+                    </form>
+                </div>";
+
+            }
+            ?>
+
         </div>
     </row>
 

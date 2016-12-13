@@ -67,25 +67,15 @@
             <form class="form-group" action="confirmation.php" method="post">
                 <fieldset class="bookingFieldset">
                     <h3>Boka rum hos oss!</h3>
-                    <label>Incheckning</label><br>
+                    <label for="datepicker">Incheckning</label><br>
                     <input type="text" id="datepicker" name="arrDate" placeholder="ÅÅÅÅ-MM-DD" pattern="\d{4}-\d{1,2}-\d{1,2}" title="ÅÅÅÅ-MM-DD" required><br>
-                    <label>Utcheckning</label><br>
+                    <label for="datepicker2">Utcheckning</label><br>
                     <input type="text" id="datepicker2" name="depDate" placeholder="ÅÅÅÅ-MM-DD" pattern="\d{4}-\d{1,2}-\d{1,2}" title="ÅÅÅÅ-MM-DD" required><br>
-                    <label>Rumstyp</label>
-                    <select name="room">
-                        <option value="Enkel">Enkel</option>
-                        <option value="Dubbel">Dubbel</option>
-                        <option value="Familje">Familje</option>
-                    </select><br>
-                    <label>Antal gäster</label>
-                    <input type="number" min="1" max="8" name="guests" required><br>
-                    <label>Förnamn</label><br>
-                    <input type="text" name="firstname" pattern="[A-Za-z\s]{1,20}" title="Endast bokstäver, max 20" required><br>
-                    <label>Efternamn</label><br>
-                    <input type="text" name="lastname" pattern="[A-Za-z\s]{1,40}" title="Endast bokstäver, max 40" required><br>
-                    <label>Mailadress</label><br>
-                    <input type="text" name="address" required><br>
-                    <input class="submitButton" type="submit">
+                    <label for="guests">Antal gäster</label>
+                    <input id="guests" type="number" min="1" max="8" name="guests" required><br>
+                    <label for="rooms">Antal rum</label>
+                    <input id="rooms" type="number" min="1" max="8" name="rooms" required><br>
+                    <input class="submitButton" type="submit" value="Sök lediga rum">
                 </fieldset>
             </form>
         </div>
@@ -117,7 +107,7 @@
             <li><a href="bokning.html">Bokning</a></li>
             <li><a href="aktiviteter.php">Aktiviteter</a></li>
             <li class="active"><a href="info.php">Info</a></li>
-            
+
             <li><a><span class="glyphicon glyphicon-home"></span> Bergmästaregatan 7, 981 33 Kiruna</a></li>
             <li><a><span class="glyphicon glyphicon-earphone"></span>
 070 603 13 21</a></li>
