@@ -34,6 +34,9 @@ var Gallery = {
           } else if (keyPressed === 39) {
             self.nextImg();
           }
+          else if (keyPressed === 27) {
+            self.hideImg();
+          }
         });
 
     },
