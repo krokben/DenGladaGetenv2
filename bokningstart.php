@@ -17,19 +17,6 @@
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="bokning.css">
 
-    <!-- Change date format in Datepicker -->
-    <script>
-        $(function(){
-            $("#datepicker").datepicker({ dateFormat: 'yy-mm-dd', minDate: new Date()});
-            $("#datepicker2").datepicker({ dateFormat: 'yy-mm-dd', minDate: new Date() }).bind("change",function(){
-                var minValue = $(this).val();
-                minValue = $.datepicker.parseDate("yy-mm-dd", minValue);
-                minValue.setDate(minValue.getDate()+1);
-                $("#datepicker2").datepicker( "option", "minDate", minValue );
-            })
-        });
-    </script>
-
     <?php
         $arrDate = $_POST['arrDate'];
         $guests = $_POST['guests'];

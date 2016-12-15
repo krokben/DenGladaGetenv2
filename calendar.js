@@ -4,4 +4,4 @@ $('.datepicker').datepicker( {
 
 $('.input-group-addon').on('click', function() {
     $('#datepicker').focus();
-})
+});

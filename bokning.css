@@ -151,3 +151,8 @@ text-decoration: none;
 label {
     margin-top: 10px;
 }
+
+/* Val av rum */
+.available-rooms {
+    background: #ccc;
+}

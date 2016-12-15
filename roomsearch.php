@@ -97,7 +97,7 @@ $result = mysqli_query($db, $query);
         <div class="col-sm-4 bookingMain">
             <form class="form-group" action="bokning.php" method="post">
                 <fieldset class="bookingFieldset">
-                    <h3>Är du säker?</h3>
+                    <h3>Var vänlig fyll i resten av uppgifterna</h3>
                     <label>Incheckning</label><br>
                     <input type="text" id="datepicker" name="arrDate" value="<?php echo $arrDate ?>" disabled><br>
                     <label>Utcheckning</label><br>
