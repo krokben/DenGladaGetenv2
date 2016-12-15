@@ -153,6 +153,23 @@ label {
 }
 
 /* Val av rum */
-.available-rooms {
-    background: #ccc;
+.room-content {
+    background: #F1F1F1;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+/*.room-pic {
+    width: 100px;
+}*/
+
+.room-pic {
+    padding: 0 !important;
+}
+
+.room-button {
+    width: 100%;
+    margin: 10px 0;
 }

@@ -116,33 +116,31 @@ $result = mysqli_query($db, $query);
                 </fieldset>
             </form>
         </div>
-        <div class="col-sm-8 bookingSecondary">
+        <div class="col-sm-8">
+            <row>
 
-
-            <?php
-            while ($row = mysqli_fetch_assoc($result)) {
-            echo "
-                <div class='available-rooms col-sm-4'>
-                    <h3>{$row['type']}</h3>";
-                    switch($row['type']) {
-                        case 'Enkel': echo "<img class='room-pic col-sm-12' src=images/enkel.jpg>"; break;
-                        case 'Dubbel': echo "<img class='room-pic col-sm-12' src=images/dubbel.jpg>"; break;
-                        case 'Familje': echo "<img class='room-pic col-sm-12' src=images/familje.jpg>"; break;
-                        default: echo "lol"; break;
-                    }
+                <?php
+                while ($row = mysqli_fetch_assoc($result)) {
 
                 echo "
-                    <p>Incheckning:
-                        <span class='fl-right'>{$row['arrDate']}</span></p>
-                    <p>Utcheckning:
-                        <span class='fl-right'>{$row['depDate']}</span></p>
-                        <input type='text' value='{$row['type']}' style='display: none;'>
-                        <button></button>
+                    <div class='available-rooms col-sm-4'>
+                        <div class='room-content'>
+                        <h3>{$row['type']}</h3>";
+                switch($row['type']) {
+                    case 'Enkel': echo "<img class='room-pic col-sm-12' src='images/enkel.jpg'>"; break;
+                    case 'Dubbel': echo "<img class='room-pic col-sm-12' src='images/dubbel.jpg'>"; break;
+                    case 'Familje': echo "<img class='room-pic col-sm-12' src='images/familje.jpg'>"; break;
+                    default: echo "lol"; break;
+                }
+
+                echo "
+                    <button class='room-button'>Välj rum</button>
+                    </div>
                 </div>";
 
-            }
-            ?>
-
+                }
+                ?>
+            </row>
         </div>
     </row>
 
