@@ -9,6 +9,8 @@ $firstname = $_POST['firstname'];
 $lastname = $_POST['lastname'];
 $address = $_POST['address'];
 
+// Date range as $querySpan for insertion into sql query
+
 $begin = new DateTime($arrDate);
 $end = new DateTime($depDate);
 
@@ -27,7 +29,8 @@ $query = "
 
 $result = mysqli_query($db, $query);
 $row_cnt = mysqli_num_rows($result);
-$bookable = true;
+
+$bookable = true; // Counter to see if room type is bookable
 
 // If room is of certain type, assign certain typeID
 switch ($room) {
