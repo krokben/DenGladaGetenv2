@@ -123,8 +123,15 @@ $result = mysqli_query($db, $query);
             while ($row = mysqli_fetch_assoc($result)) {
             echo "
                 <div class='available-rooms col-sm-4'>
-                    <h3>{$row['type']}</h3>
+                    <h3>{$row['type']}</h3>";
+                    switch($row['type']) {
+                        case 'Enkel': echo "<img class='room-pic col-sm-12' src=images/enkel.jpg>"; break;
+                        case 'Dubbel': echo "<img class='room-pic col-sm-12' src=images/dubbel.jpg>"; break;
+                        case 'Familje': echo "<img class='room-pic col-sm-12' src=images/familje.jpg>"; break;
+                        default: echo "lol"; break;
+                    }
 
+                echo "
                     <p>Incheckning:
                         <span class='fl-right'>{$row['arrDate']}</span></p>
                     <p>Utcheckning:
