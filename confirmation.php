@@ -61,7 +61,7 @@
                 <ul class="nav navbar-nav">
                     <li><a id="hem" href="index.php">Hem</a></li>
                     <li><a id="bildgalleri" href="bildgalleri.php">Bildgalleri</a></li>
-                    <li class="active2"><a id="bokning" href="bokning.html">Bokning</a></li>
+                    <li class="active2"><a id="bokning" href="bokningstart.php">Bokning</a></li>
                     <li><a id="om" href="aktiviteter.php">Aktiviteter</a></li>
                     <li><a id="info1" href="info.php">Info</a></li>
                 </ul>
@@ -119,7 +119,7 @@
         <ul class="nav navbar-nav">
             <li><a href="index.php">Hem</a></li>
             <li><a href="bildgalleri.php">Bildgalleri</a></li>
-            <li><a href="bokning.html">Bokning</a></li>
+            <li><a href="bokningstart.php">Bokning</a></li>
             <li><a href="#">Om</a></li>
             <li class="active"><a href="info.php">Info</a></li>
             

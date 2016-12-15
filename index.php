@@ -54,7 +54,7 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
                 <ul class='nav navbar-nav'>
                     <li class='active2'><a id='hem' href='index.php'>Hem</a></li>
                     <li><a id='bildgalleri' href='bildgalleri.php'>Bildgalleri</a></li>
-                    <li><a id='bokning' href='bokning.html'>Bokning</a></li>
+                    <li><a id='bokning' href='bokningstart.php'>Bokning</a></li>
                     <li><a id='om' href='aktiviteter.php'>Aktiviteter</a></li>
                     <li><a id='info1' href='info.php'>Info</a></li>
                 </ul>
@@ -138,7 +138,7 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
         <ul class='nav navbar-nav'>
             <li><a href='index.php'>Hem</a></li>
             <li><a href='bildgalleri.php'>Bildgalleri</a></li>
-            <li><a href='bokning.html'>Bokning</a></li>
+            <li><a href='bokningstart.php'>Bokning</a></li>
             <li><a href='aktiviteter.php'>Aktiviteter</a></li>
             <li class='active'><a href='info.php'>Info</a></li>
             <li><a href='#'>Kontakt</a></li>
