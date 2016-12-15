@@ -59,9 +59,9 @@
                 <fieldset class="bookingFieldset">
                     <h3>Boka rum hos oss!</h3>
                     <label for="datepicker">Incheckning</label><br>
-                    <input type="text" id="datepicker" name="arrDate" value="<?php echo $arrDate ?>" placeholder="ÅÅÅÅ-MM-DD" pattern="\d{4}-\d{1,2}-\d{1,2}" title="ÅÅÅÅ-MM-DD" required><br>
+                    <input type="text" id="datepicker" name="arrDate" readonly value="<?php echo $arrDate ?>" placeholder="ÅÅÅÅ-MM-DD" pattern="\d{4}-\d{1,2}-\d{1,2}" title="ÅÅÅÅ-MM-DD" required><br>
                     <label for="datepicker2">Utcheckning</label><br>
-                    <input type="text" id="datepicker2" name="depDate" placeholder="ÅÅÅÅ-MM-DD" pattern="\d{4}-\d{1,2}-\d{1,2}" title="ÅÅÅÅ-MM-DD" required><br>
+                    <input type="text" id="datepicker2" name="depDate" readonly placeholder="ÅÅÅÅ-MM-DD" pattern="\d{4}-\d{1,2}-\d{1,2}" title="ÅÅÅÅ-MM-DD" required><br>
                     <label for="guests">Antal gäster</label>
                     <input id="guests" type="number" min="1" max="8" name="guests" value="<?php echo $guests ?>" required><br>
                     <label for="rooms">Antal rum</label>
