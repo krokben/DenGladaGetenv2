@@ -98,22 +98,20 @@ $result = mysqli_query($db, $query);
             <form class="form-group" action="bokning.php" method="post">
                 <fieldset class="bookingFieldset">
                     <h3>Var vänlig fyll i resten av uppgifterna</h3>
+                    <label>Incheckning</label><br>
+                    <input type="text" id="datepicker" name="arrDate" value="<?php echo $arrDate ?>" disabled="disabled" required><br>
+                    <label>Utcheckning</label><br>
+                    <input type="text" id="datepicker2" name="depDate" value="<?php echo $depDate ?>" disabled="disabled" required><br>
+                    <input id="roomType" type="text" name="room" value="" required><br>
                     <label id="firstNameLabel">Förnamn</label><br>
                     <input type="text" id="firstName" name="firstname" value="" required><br>
-
-                    <label>Incheckning</label><br>
-                    <input type="text" id="datepicker" name="arrDate" readonly value="<?php echo $arrDate ?>" disabled required><br>
-                    <label>Utcheckning</label><br>
-                    <input type="text" id="datepicker2" name="depDate" readonly value="<?php echo $depDate ?>" disabled required><br>
-                    <input id="roomType" type="text" name="room" value="" disabled required><br>
-
                     <label id="lastNameLabel">Efternamn</label><br>
                     <input type="text" id="lastName" name="lastname" value="" required><br>
                     <label id="emailLabel">Mailadress</label><br>
                     <input type="text" id="email" name="address" value="" required><br>
                     <label id="confirmEmailLabel">Bekräfta mailadress</label><br>
                     <input type="text" id="bkremail" name="address" value="" required><br>
-                    <input id="clicker" type="submit" class="submitButton" value="Fyll i alla uppgifter" disabled>
+                    <input id="clicker" type="submit" class="submitButton" value="Fyll i alla uppgifter">
                 </fieldset>
             </form>
         </div>
