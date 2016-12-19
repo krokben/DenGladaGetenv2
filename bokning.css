@@ -11,6 +11,7 @@ body {
     margin: 15px auto;
     padding: 0 15px 15px 15px;
     border-radius: 5px;
+    height: 490px;
 }
 
 .bookingFieldset input, select {
@@ -20,6 +21,12 @@ body {
     border: 0;
     padding-left: 10px;
     /*margin-bottom: 10px;*/
+}
+
+.bookingFieldset h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 #roomType {
@@ -38,6 +45,10 @@ body {
     padding: 10px;
 }
 
+.marginMaster {
+    margin-top: 262px;
+}
+
 .bookingSecondary {
     /*margin: 15px;*/
     padding: 0;
@@ -49,7 +60,7 @@ body {
 }
 .bookingSecondary div div {
     width: 96%;
-    height: 102.5px;
+    height: 111px;
     background: #F1F1F1;
     border-radius: 5px;
 }
@@ -166,6 +177,7 @@ label {
 
 .room-pic {
     padding: 0 !important;
+    width: 100%;
 }
 
 .room-button {

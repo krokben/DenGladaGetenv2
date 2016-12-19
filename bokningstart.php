@@ -62,11 +62,7 @@
                     <input type="text" id="datepicker" name="arrDate" readonly value="<?php echo $arrDate ?>" placeholder="ÅÅÅÅ-MM-DD" pattern="\d{4}-\d{1,2}-\d{1,2}" title="ÅÅÅÅ-MM-DD" required><br>
                     <label for="datepicker2">Utcheckning</label><br>
                     <input type="text" id="datepicker2" name="depDate" readonly placeholder="ÅÅÅÅ-MM-DD" pattern="\d{4}-\d{1,2}-\d{1,2}" title="ÅÅÅÅ-MM-DD" required><br>
-                    <label for="guests">Antal gäster</label>
-                    <input id="guests" type="number" min="1" max="8" name="guests" value="<?php echo $guests ?>" required><br>
-                    <label for="rooms">Antal rum</label>
-                    <input id="rooms" type="number" min="1" max="8" name="rooms" value="<?php echo $guests ?>" required><br>
-                    <input class="submitButton" type="submit" value="Sök lediga rum">
+                    <input class="submitButton marginMaster" type="submit" value="Sök lediga rum">
                 </fieldset>
             </form>
         </div>
