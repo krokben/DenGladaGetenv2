@@ -102,15 +102,14 @@ $result = mysqli_query($db, $query);
                     <input type="text" id="datepicker" name="arrDate" readonly value="<?php echo $arrDate ?>" disabled required><br>
                     <label>Utcheckning</label><br>
                     <input type="text" id="datepicker2" name="depDate" readonly value="<?php echo $depDate ?>" disabled required><br>
-                    <label>Rumstyp</label>
                     <input id="roomType" type="text" name="room" value="<?php echo $room ?>" disabled required><br>
-                    <label>Förnamn</label><br>
-                    <input type="text" id='firstName' name="firstname" value="<?php echo $firstname ?>" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" required><br>
-                    <label>Efternamn</label><br>
-                    <input type="text" id='lastName' name="lastname" value="<?php echo $lastname ?>" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" required><br>
-                    <label>Mailadress</label><br>
+                    <label id="firstNameLabel">Förnamn</label><br>
+                    <input type="text" id="firstName" name="firstname" value="<?php echo $firstname ?>" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" required><br>
+                    <label id="lastNameLabel">Efternamn</label><br>
+                    <input type="text" id="lastName" name="lastname" value="<?php echo $lastname ?>" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" required><br>
+                    <label id="emailLabel">Mailadress</label><br>
                     <input type="text" id="email" name="address" value="<?php echo $address ?>" pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" required><br>
-                    <label>Bekräfta mailadress</label><br>
+                    <label id="confirmEmailLabel">Bekräfta mailadress</label><br>
                     <input type="text" id="bkremail" name="address" value="<?php echo $address ?>" pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" required><br>
                     <input id="clicker" type="submit" class="submitButton" value="Fyll i alla uppgifter" disabled>
                 </fieldset>

@@ -4,7 +4,6 @@ body {
 
 .bookingMain {
     margin: 0;
-    height: 500px;
 }
 
 .bookingFieldset {
@@ -23,8 +22,8 @@ body {
     /*margin-bottom: 10px;*/
 }
 
-.bookingFieldset select {
-
+#roomType {
+    display: none;
 }
 
 .submitButton {
