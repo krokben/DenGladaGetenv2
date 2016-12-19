@@ -3,8 +3,6 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
 
 $arrDate = $_POST['arrDate'];
 $depDate = $_POST['depDate'];
-$rooms = $_POST['rooms'];
-$guests = $_POST['guests'];
 
 $begin = new DateTime($arrDate);
 $end = new DateTime($depDate);
@@ -17,16 +15,18 @@ foreach($daterange as $date){
 }
 
 $query = "
-        SELECT DISTINCT type FROM rooms AS r
+        SELECT id, type FROM rooms AS r
         WHERE r.id NOT IN (
-        SELECT typeID FROM bookings AS b
-        WHERE (
-        (arrDate BETWEEN '$arrDate' AND '$depDate')
-        OR (depDate BETWEEN '$arrDate' AND '$depDate')
-        OR (arrDate = '$arrDate')
-        OR (depDate = '$depDate')
-        OR ('$arrDate' >= arrDate AND '$depDate' <= depDate)
-        ))
+            SELECT typeID FROM bookings AS b
+            WHERE
+            (arrDate BETWEEN '$arrDate' AND '$depDate')
+            OR (depDate BETWEEN '$arrDate' AND '$depDate')
+            OR (arrDate = '$arrDate')
+            OR (depDate = '$depDate')
+            OR ('$arrDate' >= arrDate AND '$depDate' <= depDate)
+        )
+        GROUP BY type
+        ORDER BY id
 ";
 
 $result = mysqli_query($db, $query);
@@ -98,19 +98,21 @@ $result = mysqli_query($db, $query);
             <form class="form-group" action="bokning.php" method="post">
                 <fieldset class="bookingFieldset">
                     <h3>Var vänlig fyll i resten av uppgifterna</h3>
+                    <label id="firstNameLabel">Förnamn</label><br>
+                    <input type="text" id="firstName" name="firstname" value="" required><br>
+
                     <label>Incheckning</label><br>
                     <input type="text" id="datepicker" name="arrDate" readonly value="<?php echo $arrDate ?>" disabled required><br>
                     <label>Utcheckning</label><br>
                     <input type="text" id="datepicker2" name="depDate" readonly value="<?php echo $depDate ?>" disabled required><br>
-                    <input id="roomType" type="text" name="room" value="<?php echo $room ?>" disabled required><br>
-                    <label id="firstNameLabel">Förnamn</label><br>
-                    <input type="text" id="firstName" name="firstname" value="<?php echo $firstname ?>" required><br>
+                    <input id="roomType" type="text" name="room" value="" disabled required><br>
+
                     <label id="lastNameLabel">Efternamn</label><br>
-                    <input type="text" id="lastName" name="lastname" value="<?php echo $lastname ?>" required><br>
+                    <input type="text" id="lastName" name="lastname" value="" required><br>
                     <label id="emailLabel">Mailadress</label><br>
-                    <input type="text" id="email" name="address" value="<?php echo $address ?>" required><br>
+                    <input type="text" id="email" name="address" value="" required><br>
                     <label id="confirmEmailLabel">Bekräfta mailadress</label><br>
-                    <input type="text" id="bkremail" name="address" value="<?php echo $address ?>" required><br>
+                    <input type="text" id="bkremail" name="address" value="" required><br>
                     <input id="clicker" type="submit" class="submitButton" value="Fyll i alla uppgifter" disabled>
                 </fieldset>
             </form>
@@ -134,7 +136,7 @@ $result = mysqli_query($db, $query);
 
                 echo "
                         <form action='confirmation.php' method='post'>
-                            <input type='text' value='{$row['type']}' style='display: none;'>
+                            <input type='text' value='{$row['id']}' style='display: none;'>
                         </form>
                         <button class='room-button btn btn-default'>Välj rum</button>
                     </div>
