@@ -4,15 +4,20 @@ $().ready(function() {
         console.log($(this).parent().parent().find('input[type=text]').val());
         $('#roomType').val($(this).parent().parent().find('input[type=text]').val());
     switch ($('#roomType').val()) {
-        case 'Enkel':   $('.enkel').parent().css('background', '#39B647');
+        case '1':
+        case '2':   $('.enkel').parent().css('background', '#39B647');
                         $('.dubbel').parent().css('background', '#F1F1F1');
                         $('.familje').parent().css('background', '#F1F1F1');
                         break;
-        case 'Dubbel':  $('.dubbel').parent().css('background', '#39B647');
+        case '3':
+        case '4':
+        case '5':
+        case '6':  $('.dubbel').parent().css('background', '#39B647');
                         $('.enkel').parent().css('background', '#F1F1F1');
                         $('.familje').parent().css('background', '#F1F1F1');
                         break;
-        case 'Familje': $('.familje').parent().css('background', '#39B647');
+        case '7':
+        case '8': $('.familje').parent().css('background', '#39B647');
                         $('.dubbel').parent().css('background', '#F1F1F1');
                         $('.enkel').parent().css('background', '#F1F1F1');
                         break;
