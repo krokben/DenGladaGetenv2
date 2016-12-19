@@ -1,7 +1,6 @@
 // Choice of room
 $().ready(function() {
     $('.room-content').children('button').on('click', function() {
-        console.log($(this).parent().parent().find('input[type=text]').val());
         $('#roomType').val($(this).parent().parent().find('input[type=text]').val());
     switch ($('#roomType').val()) {
         case '1':
@@ -27,8 +26,15 @@ $().ready(function() {
 });
 
 // Check if all fields are filled and if confirmation field is equal to email field
-$('input').blur(function() {
-    console.log($('.bookingFieldset').children().find('span').length);
+$('input').on('blur', validateFields);
+$('.room-button').on('click', function() {
+    setTimeout(function() {
+            validateFields();
+        }, 100);
+});
+
+function validateFields() {
+    console.log($(this));
     if($('#datepicker').val() &&
         $('#datepicker2').val() &&
         $('#roomType').val() &&
@@ -42,7 +48,7 @@ $('input').blur(function() {
         } else {
             $('#clicker').prop('disabled', true).val('Fyll i alla uppgifter');
         }
-});
+}
 
 // Error messages
 $('#firstName').focusout(function() {
@@ -64,7 +70,6 @@ $('#lastName').focusout(function() {
     if ($(this).val() !== '') { // Only execute if user has put anything in the field
         var pattern = new RegExp(/^[a-zA-Z ]{2,20}$/);
         if (pattern.test($(this).val()) === false) {
-            console.log($(this).prev());
             $('#lastNameLabel').append(' <span class="label label-danger">Endast 2 - 20 bokstäver tillåtna.</span>');
         }
     }
@@ -80,7 +85,6 @@ $('#email').focusout(function() {
     if ($(this).val() !== '') { // Only execute if user has put anything in the field
         var pattern = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
         if (pattern.test($(this).val()) === false) {
-            console.log($(this).prev());
             $('#emailLabel').append(' <span class="label label-danger">Fyll i en giltig mailadress.</span>');
         }
     }
@@ -94,7 +98,6 @@ $('#email').focus(function() {
 
 $('#bkremail').focusout(function() {
     if ($(this).val() !== '') { // Only execute if user has put anything in the field
-        console.log($(this).val());
         if ($(this).val() !== $('#email').val()) {
             $('#confirmEmailLabel').append(' <span class="label label-danger">Fältet måste matcha det ovan.</span>');
         }
