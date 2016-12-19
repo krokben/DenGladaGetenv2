@@ -103,7 +103,7 @@ while($row = mysqli_fetch_assoc($result)) {
 
 if ($bookable) {
     $sql = "INSERT INTO bookings (arrDate, depDate, room, guests, firstname, lastname, address, typeID)
-    VALUES ('$arrDate', '$depDate', '$room', '$guests', '$firstname', '$lastname', '$address', '$typeID')";
+    VALUES ('$arrDate', '$depDate', 'tom', '$guests', '$firstname', '$lastname', '$address', '$room')";
 
     if ($db->query($sql) === TRUE) {
         echo "<!DOCTYPE html>

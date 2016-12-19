@@ -1,6 +1,7 @@
 // Choice of room
 $().ready(function() {
     $('.room-content').children('button').on('click', function() {
+        console.log($(this).parent().parent().find('input[type=text]').val());
         $('#roomType').val($(this).parent().parent().find('input[type=text]').val());
     switch ($('#roomType').val()) {
         case 'Enkel':   $('.enkel').parent().css('background', '#39B647');
