@@ -9,6 +9,7 @@ footer {
     /*transform: translate(-50%);
     width: 100%;
     box-sizing: border-box;*/
+    margin-top: 15px;
 }
 
 footer a {
@@ -33,4 +34,8 @@ footer a:hover {
 
 body {
     position: relative !important;
+}
+
+@media only screen and (min-width: 700px) {
+    footer {margin-top: 0};
 }

@@ -30,7 +30,7 @@ switch ($typeID) {
 }
 
 
-    echo $sql = "INSERT INTO bookings (arrDate, depDate, room, firstname, lastname, address, typeID)
+    $sql = "INSERT INTO bookings (arrDate, depDate, room, firstname, lastname, address, typeID)
     VALUES ('$arrDate', '$depDate', '$room', '$firstname', '$lastname', '$address', '$typeID')";
 
     if ($db->query($sql) === TRUE) {
@@ -113,12 +113,15 @@ switch ($typeID) {
                 </body>
             </html>
         ";
+
+        // Send email
+        $message = 'Hej ' . $firstname . ' ' . $lastname . ', ' . 'Vi vill hälsa er hjärtligt välkommen till Den glada geten mellan ' . $arrDate . 'och ' . $depDate . '! Maila oss gärna om ni har några frågor.';
+        //mail($address, 'Bokningsbekräftelse', $message);
+
     } else {
         echo "Tyvärr, där blev det något fel. Vänligen försök igen.";
         echo "Error: " . $sql . "<br>" . $db->error;
     }
-
-
 
 
 

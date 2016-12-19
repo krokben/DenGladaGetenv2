@@ -49,6 +49,12 @@ body {
     margin-top: 262px;
 }
 
+.marginSides {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+
 .bookingSecondary {
     /*margin: 15px;*/
     padding: 0;
@@ -79,6 +85,24 @@ body {
     height: 15.2vh;
     background: lightgreen;
     border-radius: 5px;
+}
+
+.changeDate {
+    background: #F1F1F1;
+    color: #000;
+}
+
+.changeDate:hover {
+    background: #39B647;
+    color: #fff;
+}
+
+.changeDate a {
+    text-decoration: none;
+}
+
+.changeDate i {
+    font-size: 20px;
 }
 
 .temp {
@@ -171,9 +195,10 @@ label {
     border-radius: 5px;
 }
 
-/*.room-pic {
-    width: 100px;
-}*/
+.room-content-green {
+    background: #39B647;
+    color: #fff;
+}
 
 .room-pic {
     padding: 0 !important;
@@ -191,4 +216,16 @@ label {
 
 .displayNone {
     display: none;
+}
+
+.available-rooms {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media only screen and (min-width: 700px) {
+    .available-rooms {
+        padding-left: 15px;
+        padding-right: 15px;
+    };
 }

@@ -150,6 +150,13 @@ $result = mysqli_query($db, $query);
 
                 ?>
             </row>
+            <div class="col-sm-12">
+                <a href="bokningstart.php">
+                    <div class="col-sm-12 changeDate room-content marginSides">
+                        <h2><i class="glyphicon glyphicon-wrench"></i> Klicka här för att ändra datum</h2>
+                    </div>
+                </a>
+            </div>
         </div>
     </row>
 
