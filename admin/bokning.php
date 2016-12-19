@@ -49,10 +49,6 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == TRUE) {
                         <p class='click'>Klicka för mer info...</p>
                         <div class='info hidden'>
                             <div class='info-div'>
-                                <p>Antal gäster:<p>
-                                <p><span class=''>{$row['guests']}</span></p>
-                            </div>
-                            <div class='info-div'>
                                 <p>Rumsnummer:</p>
                                 <p><span class=''>{$row['typeID']}</span></p>
                             </div>

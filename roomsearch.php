@@ -104,7 +104,7 @@ $result = mysqli_query($db, $query);
                     <label>Utcheckning</label><br>
                     <input type="text" value="<?php echo $depDate ?>" disabled>
                     <input type="text" class="displayNone" id="datepicker2" name="depDate" value="<?php echo $depDate ?>" required><br>
-                    <input id="roomType" class="displayNone" type="text" name="room" value="" required><br>
+                    <input id="roomType" class="displayNone" type="text" name="typeID" value="" required><br>
                     <label id="firstNameLabel">Förnamn</label><br>
                     <input type="text" id="firstName" name="firstname" value="" required><br>
                     <label id="lastNameLabel">Efternamn</label><br>
