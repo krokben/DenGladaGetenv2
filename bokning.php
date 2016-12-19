@@ -3,17 +3,35 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
 
 $arrDate = $_POST['arrDate'];
 $depDate = $_POST['depDate'];
-$room = $_POST['room'];
-$guests = $_POST['guests'];
+$typeID = $_POST['typeID'];
 $firstname = $_POST['firstname'];
 $lastname = $_POST['lastname'];
 $address = $_POST['address'];
 
+// Check what kind of room
+
+switch ($typeID) {
+    case '1':
+    case '2':
+        $room = 'Enkel';
+        break;
+    case '3':
+    case '4':
+    case '5':
+    case '6':
+        $room = 'Dubbel';
+        break;
+    case '7':
+    case '8':
+        $room = 'Familje';
+        break;
+    default:
+        break;
+}
 
 
-
-    echo $sql = "INSERT INTO bookings (arrDate, depDate, room, guests, firstname, lastname, address, typeID)
-    VALUES ('$arrDate', '$depDate', 'tom', '$guests', '$firstname', '$lastname', '$address', '$room')";
+    echo $sql = "INSERT INTO bookings (arrDate, depDate, room, firstname, lastname, address, typeID)
+    VALUES ('$arrDate', '$depDate', '$room', '$firstname', '$lastname', '$address', '$typeID')";
 
     if ($db->query($sql) === TRUE) {
         echo "<!DOCTYPE html>
