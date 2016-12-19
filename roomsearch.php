@@ -99,10 +99,12 @@ $result = mysqli_query($db, $query);
                 <fieldset class="bookingFieldset">
                     <h3>Var vänlig fyll i resten av uppgifterna</h3>
                     <label>Incheckning</label><br>
-                    <input type="text" id="datepicker" name="arrDate" value="<?php echo $arrDate ?>" disabled="disabled" required><br>
+                    <input type="text" value="<?php echo $arrDate ?>" disabled>
+                    <input type="text" class="displayNone" id="datepicker" name="arrDate" value="<?php echo $arrDate ?>" required><br>
                     <label>Utcheckning</label><br>
-                    <input type="text" id="datepicker2" name="depDate" value="<?php echo $depDate ?>" disabled="disabled" required><br>
-                    <input id="roomType" type="text" name="room" value="" required><br>
+                    <input type="text" value="<?php echo $depDate ?>" disabled>
+                    <input type="text" class="displayNone" id="datepicker2" name="depDate" value="<?php echo $depDate ?>" required><br>
+                    <input id="roomType" class="displayNone" type="text" name="room" value="" required><br>
                     <label id="firstNameLabel">Förnamn</label><br>
                     <input type="text" id="firstName" name="firstname" value="" required><br>
                     <label id="lastNameLabel">Efternamn</label><br>
@@ -111,7 +113,7 @@ $result = mysqli_query($db, $query);
                     <input type="text" id="email" name="address" value="" required><br>
                     <label id="confirmEmailLabel">Bekräfta mailadress</label><br>
                     <input type="text" id="bkremail" name="address" value="" required><br>
-                    <input id="clicker" type="submit" class="submitButton" value="Fyll i alla uppgifter">
+                    <input id="clicker" type="submit" class="submitButton" value="Fyll i alla uppgifter" disabled>
                 </fieldset>
             </form>
         </div>
@@ -159,7 +161,6 @@ $result = mysqli_query($db, $query);
             <li><a href="bokningstart.php">Bokning</a></li>
             <li><a href="aktiviteter.php">Aktiviteter</a></li>
             <li class="active"><a href="info.php">Info</a></li>
-
             <li><a><span class="glyphicon glyphicon-home"></span> Bergmästaregatan 7, 981 33 Kiruna</a></li>
             <li><a><span class="glyphicon glyphicon-earphone"></span>
 070 603 13 21</a></li>
