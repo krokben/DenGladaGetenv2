@@ -104,13 +104,13 @@ $result = mysqli_query($db, $query);
                     <input type="text" id="datepicker2" name="depDate" readonly value="<?php echo $depDate ?>" disabled required><br>
                     <input id="roomType" type="text" name="room" value="<?php echo $room ?>" disabled required><br>
                     <label id="firstNameLabel">Förnamn</label><br>
-                    <input type="text" id="firstName" name="firstname" value="<?php echo $firstname ?>" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" required><br>
+                    <input type="text" id="firstName" name="firstname" value="<?php echo $firstname ?>" required><br>
                     <label id="lastNameLabel">Efternamn</label><br>
-                    <input type="text" id="lastName" name="lastname" value="<?php echo $lastname ?>" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" required><br>
+                    <input type="text" id="lastName" name="lastname" value="<?php echo $lastname ?>" required><br>
                     <label id="emailLabel">Mailadress</label><br>
-                    <input type="text" id="email" name="address" value="<?php echo $address ?>" pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" required><br>
+                    <input type="text" id="email" name="address" value="<?php echo $address ?>" required><br>
                     <label id="confirmEmailLabel">Bekräfta mailadress</label><br>
-                    <input type="text" id="bkremail" name="address" value="<?php echo $address ?>" pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" required><br>
+                    <input type="text" id="bkremail" name="address" value="<?php echo $address ?>" required><br>
                     <input id="clicker" type="submit" class="submitButton" value="Fyll i alla uppgifter" disabled>
                 </fieldset>
             </form>
@@ -126,9 +126,9 @@ $result = mysqli_query($db, $query);
                         <div class='room-content'>
                         <h3>{$row['type']}</h3>";
                 switch($row['type']) {
-                    case 'Enkel': echo "<img class='room-pic col-sm-12 enkel' src='images/enkel.jpg'><p>Pris: 395 kr / natt</p>"; break;
-                    case 'Dubbel': echo "<img class='room-pic col-sm-12 dubbel' src='images/dubbel.jpg'><p>Pris: 995 kr / natt</p>"; break;
-                    case 'Familje': echo "<img class='room-pic col-sm-12 familje' src='images/familje.jpg'><p>Pris: 1395 kr / natt</p>"; break;
+                    case 'Enkel': echo "<img class='room-pic col-sm-12 enkel' src='images/enkel.jpg'><p>Pris: 395 kr / natt</p><p>Rumsnr: {$row['id']}</p>"; break;
+                    case 'Dubbel': echo "<img class='room-pic col-sm-12 dubbel' src='images/dubbel.jpg'><p>Pris: 995 kr / natt</p><p>Rumsnr: {$row['id']}</p>"; break;
+                    case 'Familje': echo "<img class='room-pic col-sm-12 familje' src='images/familje.jpg'><p>Pris: 1395 kr / natt</p><p>Rumsnr: {$row['id']}</p>"; break;
                     default: echo "lol"; break;
                 }
 
@@ -136,11 +136,16 @@ $result = mysqli_query($db, $query);
                         <form action='confirmation.php' method='post'>
                             <input type='text' value='{$row['type']}' style='display: none;'>
                         </form>
-                        <button class='room-button'>Välj rum</button>
+                        <button class='room-button btn btn-default'>Välj rum</button>
                     </div>
                 </div>";
 
                 }
+
+                if(mysqli_num_rows($result) == 0) {
+                    echo "<h1>Det finns tyvärr inga lediga rum under vald period.</h1>";
+                }
+
                 ?>
             </row>
         </div>
