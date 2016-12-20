@@ -1,29 +1,5 @@
 $().ready(function() {
-    // $('#clicker').click(function() {
-    //     $('input:not(:last-child)').each(function() {
-    //         if ($(this).attr('disabled')) {
-    //             $(this).removeAttr('disabled');
-    //         }
-    //         else {
-    //             $(this).attr({
-    //                 'disabled': 'disabled'
-    //             });
-    //         }
-    //     });
-    //     $('select').each(function() {
-    //         if ($(this).attr('disabled')) {
-    //             $(this).removeAttr('disabled');
-    //         }
-    //         else {
-    //             $(this).attr({
-    //                 'disabled': 'disabled'
-    //             });
-    //         }
-    //     });
-    // });
-
 // Datepicker
-
     var daysToAdd = 1;
     $("#datepicker").datepicker({
         minDate: new Date(),
@@ -52,13 +28,4 @@ $().ready(function() {
         }
     });
 
-// $(function(){
-//     $("#datepicker").datepicker({ dateFormat: 'yy-mm-dd', minDate: new Date()});
-//     $("#datepicker2").datepicker({ dateFormat: 'yy-mm-dd', minDate: new Date() }).bind("change",function(){
-//         var minValue = $(this).val();
-//         minValue = $.datepicker.parseDate("yy-mm-dd", minValue);
-//         minValue.setDate(minValue.getDate()+1);
-//         $("#datepicker2").datepicker( "option", "minDate", minValue );
-//     });
-// });
 });

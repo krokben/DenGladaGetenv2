@@ -53,7 +53,7 @@ function validateFields() {
 // Error messages
 $('#firstName').focusout(function() {
     if ($(this).val() !== '') { // Only execute if user has put anything in the field
-        var pattern = new RegExp(/^[a-zA-Z ]{2,20}$/);
+        var pattern = new RegExp(/^[a-öA-Ö ]{2,20}$/);
         if (pattern.test($(this).val()) === false) {
             $('#firstNameLabel').append(' <span class="label label-danger">Endast 2 - 20 bokstäver tillåtna.</span>');
         }
@@ -68,7 +68,7 @@ $('#firstName').focus(function() {
 
 $('#lastName').focusout(function() {
     if ($(this).val() !== '') { // Only execute if user has put anything in the field
-        var pattern = new RegExp(/^[a-zA-Z ]{2,20}$/);
+        var pattern = new RegExp(/^[a-öA-Ö ]{2,20}$/);
         if (pattern.test($(this).val()) === false) {
             $('#lastNameLabel').append(' <span class="label label-danger">Endast 2 - 20 bokstäver tillåtna.</span>');
         }
