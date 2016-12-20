@@ -5,23 +5,23 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Den glada geten</title>
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link rel='icon' href='images/favicon.ico' type='image/png' sizes='16x16'>
-  <meta name='description' content='Den glada geten - Information om oss'>
-  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
-  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
-  <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
-  <script src='http://www.w3schools.com/lib/w3data.js'></script>
-  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
-  <link rel='stylesheet' href='header.css'>
-  <link rel='stylesheet' href='main.css'>
-  <link rel='stylesheet' href='menu.css'>
-  <link rel='stylesheet' href='footer.css'>
-  <link rel='stylesheet' href='info.css'>
+    <title>Den glada geten</title>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='icon' href='images/favicon.ico' type='image/png' sizes='16x16'>
+    <meta name='description' content='Den glada geten - Information om oss'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+    <script src='http://www.w3schools.com/lib/w3data.js'></script>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link rel='stylesheet' href='header.css'>
+    <link rel='stylesheet' href='main.css'>
+    <link rel='stylesheet' href='menu.css'>
+    <link rel='stylesheet' href='footer.css'>
+    <link rel='stylesheet' href='info.css'>
 </head>
 <body>
     <!-- Header -->
@@ -55,7 +55,7 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
         <div class='findUs jumbotron'>Hitta hit</div>
         <!-- Karta -->
         <div id='map'></div>
-        <h1 class='welcome padTop'>Bergmästaregatan 7<br>981 33 Kiruna</h1>
+        <h1 class='welcome padTop'>Tjärnholmen<br>954 42 Norrbotten</h1>
         <article class='row padArticle'>
             <section class='col-sm-6'>
                 <?php
