@@ -134,9 +134,10 @@ $db = mysqli_connect('geten-219508.mysql.binero.se', '219508_rb16043','gladagete
                 <li><a href='bokningstart.php'>Bokning</a></li>
                 <li><a href='aktiviteter.php'>Aktiviteter</a></li>
                 <li class='active'><a href='info.php'>Info</a></li>
-                <li><a><span class='glyphicon glyphicon-home'></span> Bergmästaregatan 7, 981 33 Kiruna</a></li>
+                <li><a><span class='glyphicon glyphicon-home'></span> Tjärnholmen, 954 42 Norrbotten</a></li>
                 <li><a><span class='glyphicon glyphicon-earphone'></span>
     070 603 13 21</a></li>
+                <li><a href='mailto:glada.geten@kyh.se'><span class='glyphicon glyphicon-envelope'></span> Maila oss!</a></li>
                 <li id='vector'><a href='http://www.freepik.com/free-photo/nature-design-with-bokeh-effect_879723.htm'>Header image designed by Freepik</a>
                 </li>
                 <li><a href='login.php'>Login</a></li>

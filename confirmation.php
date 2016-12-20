@@ -123,7 +123,7 @@
             <li><a href="#">Om</a></li>
             <li class="active"><a href="info.php">Info</a></li>
             
-            <li><a><span class="glyphicon glyphicon-home"></span> Bergmästaregatan 7, 981 33 Kiruna</a></li>
+            <li><a><span class="glyphicon glyphicon-home"></span> Tjärnholmen, 954 42 Norrbotten</a></li>
             <li><a><span class="glyphicon glyphicon-earphone"></span>
 070 603 13 21</a></li>
             <li id="vector"><a href="http://www.freepik.com/free-photo/nature-design-with-bokeh-effect_879723.htm">Header image designed by Freepik</a>
