@@ -40,28 +40,50 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == TRUE) {
 
             while($row = mysqli_fetch_assoc($result)) {
             echo "
-                    <div class='book-item'>
-                        <h3>{$row['firstname']} {$row['lastname']}</h3>
-                        <p>Incheckning:
-                            <span class='fl-right'>{$row['arrDate']}</span></p>
-                        <p>Utcheckning:
-                            <span class='fl-right'>{$row['depDate']}</span></p>
-                        <p class='click'>Klicka för mer info...</p>
-                        <div class='info hidden'>
-                            <div class='info-div'>
-                                <p>Rumsnummer:</p>
-                                <p><span class=''>{$row['typeID']}</span></p>
+
+                        <div class='book-wrapper'>
+                            <div class='book-item'>
+                                <h3>{$row['firstname']} {$row['lastname']}</h3>
+                                <p>Incheckning:
+                                    <span class='fl-right'>{$row['arrDate']}</span></p>
+                                <p>Utcheckning:
+                                    <span class='fl-right'>{$row['depDate']}</span></p>
+                                <p class='click'>Klicka för mer info...</p>
+                                <div class='info hidden'>
+                                    <div class='info-div'>
+                                        <p>Rumsnummer:</p>
+                                        <p><span class=''>{$row['typeID']}</span></p>
+                                    </div>
+                                    <div class='info-div'>
+                                        <p>Typ av rum:</p>
+                                        <p><span class=''>{$row['room']}</span></p>
+                                    </div>
+                                    <div class='info-div'>
+                                        <p>E-mail:</p>
+                                        <p><span class=''>{$row['address']}</span></p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class='info-div'>
-                                <p>Typ av rum:</p>
-                                <p><span class=''>{$row['room']}</span></p>
-                            </div>
-                            <div class='info-div'>
-                                <p>E-mail:</p>
-                                <p><span class=''>{$row['address']}</span></p>
+                            <div class='info-div hidden'>";
+
+                            $deleteId = $_POST['id'];
+                            $sql2 = "DELETE FROM bookings WHERE id = $deleteId";
+
+                            if ($db->query($sql2) === TRUE) {
+                                header("Refresh:0");
+                                // echo "Record deleted successfully";
+                            } else {
+                                // echo "Error deleting record: " . $db->error;
+                            }
+
+
+                            echo "
+                                <form action='' method='post'>
+                                    <input type='text' name='id' class='booking-delete' value='{$row['id']}' style='display:none'>
+                                    <input class='booking-btn' type='submit' value='Radera'>
+                                </form>
                             </div>
                         </div>
-                    </div>
                 ";
             }
         echo "
